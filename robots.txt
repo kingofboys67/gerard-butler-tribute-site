@@ -1,0 +1,60 @@
+# robots.txt for Gerard Butler Official Site
+# Optimized for Search Engines (Google, Bing) & Generative AI Crawlers (OpenAI, Gemini, Claude, Perplexity, Applebot)
+
+User-agent: *
+Allow: /
+
+# Explicit Search Engine Bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Explicit Generative Engine & AI Search Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Disallow internal comparison and scratch dev pages
+Disallow: /compare.html
+Disallow: /compare_greenland.html
+Disallow: /find_gallery.html
+Disallow: /find_grid.html
+Disallow: /find_others.html
+Disallow: /gallery_check.html
+Disallow: /test_heli.html
+Disallow: /test_images.html
+Disallow: /test_reels.html
+
+# Sitemaps
+Sitemap: https://www.gerardbutlerofficial.com/sitemap.xml
+Sitemap: https://www.gerardbutlerofficial.com/sitemap-images.xml
+Sitemap: https://www.gerardbutlerofficial.com/sitemap-videos.xml
+
+# LLM Specification Standards
+# Canonical Summary: https://www.gerardbutlerofficial.com/llms.txt
+# Full Plaintext Knowledge Base: https://www.gerardbutlerofficial.com/llms-full.txt

