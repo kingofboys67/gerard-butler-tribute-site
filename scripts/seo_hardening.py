@@ -19,7 +19,12 @@ import re
 import subprocess
 from datetime import date
 
-from PIL import Image, ImageEnhance, ImageFilter
+try:  # Pillow is only needed for Open Graph card generation
+    from PIL import Image, ImageEnhance, ImageFilter
+
+    HAS_PIL = True
+except ImportError:  # pragma: no cover - e.g. minimal CI images
+    HAS_PIL = False
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://www.gerardbutlerofficial.com"
@@ -63,6 +68,8 @@ def image_size(rel_path):
     dims = None
     if os.path.isfile(fp):
         try:
+            if not HAS_PIL:
+                raise RuntimeError("Pillow unavailable")
             with Image.open(fp) as im:
                 dims = im.size
         except Exception:  # noqa: BLE001 - avif etc. fall back to sips
@@ -289,6 +296,8 @@ def fix_image_tags(html, page):
 # --------------------------------------------------------------------- OG cards
 def make_og_card(src_rel, out_name):
     """Compose a 1200x630 social card: blurred cover art + centred poster."""
+    if not HAS_PIL:
+        return None
     out = os.path.join(OG_DIR, out_name)
     if os.path.exists(out):
         return "/img/og/" + out_name

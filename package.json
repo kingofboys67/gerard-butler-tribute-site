@@ -5,6 +5,7 @@
   "description": "Official Gerard Butler website & archive — static site with a Python SEO build pipeline.",
   "scripts": {
     "build": "python3 scripts/seo_build.py --quiet && python3 scripts/check_html.py",
+    "vercel-build": "echo 'Static site: HTML is pre-generated and committed — no build step required.'",
     "build:full": "python3 scripts/seo_build.py",
     "pages": "python3 scripts/build_reference_pages.py",
     "audit": "python3 scripts/deep_seo_audit.py",
