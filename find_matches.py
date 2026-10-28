@@ -1,7 +1,7 @@
 import os
 import glob
 from PIL import Image
-import numpy as np
+import numpy as np  # pyright: ignore[reportMissingImports]
 
 user_imgs = [
     "/Users/mac/.gemini/antigravity/brain/5742ab31-1d2a-4ddb-a378-b97d2a059511/media__1778015319287.png",

@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "property-no-unknown": [true, { "ignoreProperties": ["composes"] }],
+    "declaration-block-no-duplicate-properties": [
+      true,
+      { "ignore": ["consecutive-duplicates-with-different-values"] }
+    ],
+    "no-duplicate-selectors": true
+  }
+}

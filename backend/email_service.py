@@ -1,7 +1,7 @@
 import smtplib
 import os
 from email.message import EmailMessage
-from dotenv import load_dotenv
+from dotenv import load_dotenv  # pyright: ignore[reportMissingImports]
 
 load_dotenv()
 

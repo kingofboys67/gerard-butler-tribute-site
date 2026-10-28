@@ -18,13 +18,16 @@ import os
 import re
 import subprocess
 from datetime import date
+from html import unescape
 
-try:  # Pillow is only needed for Open Graph card generation
-    from PIL import Image, ImageEnhance, ImageFilter
+def _pil_modules():
+    """Import Pillow lazily. Returns (Image, ImageEnhance, ImageFilter) or None."""
+    try:
+        from PIL import Image, ImageEnhance, ImageFilter  # pyright: ignore[reportMissingImports]
 
-    HAS_PIL = True
-except ImportError:  # pragma: no cover - e.g. minimal CI images
-    HAS_PIL = False
+        return Image, ImageEnhance, ImageFilter
+    except ImportError:  # pragma: no cover - e.g. minimal CI images
+        return None
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://www.gerardbutlerofficial.com"
@@ -68,10 +71,12 @@ def image_size(rel_path):
     dims = None
     if os.path.isfile(fp):
         try:
-            if not HAS_PIL:
+            mods = _pil_modules()
+            if mods is None:
                 raise RuntimeError("Pillow unavailable")
-            with Image.open(fp) as im:
-                dims = im.size
+            pil_image = mods[0]
+            with pil_image.open(fp) as im:
+                dims = tuple(im.size)
         except Exception:  # noqa: BLE001 - avif etc. fall back to sips
             try:
                 out = subprocess.run(
@@ -134,11 +139,21 @@ def source_copy(html):
     return ""
 
 
+def fully_unescape(text):
+    """Collapse any depth of HTML entity escaping (&amp;amp;quot; -> &quot;)."""
+    for _ in range(4):
+        decoded = unescape(text)
+        if decoded == text:
+            break
+        text = decoded
+    return text
+
+
 def build_description(html, title, page=""):
     current = re.search(
         r'<meta[^>]+name="description"[^>]+content="([^"]*)"', html, re.I | re.S
     )
-    current = current.group(1).strip() if current else ""
+    current = fully_unescape(current.group(1).strip()) if current else ""
     cur = current.rstrip()
     if (
         120 <= len(cur) <= 160
@@ -296,8 +311,11 @@ def fix_image_tags(html, page):
 # --------------------------------------------------------------------- OG cards
 def make_og_card(src_rel, out_name):
     """Compose a 1200x630 social card: blurred cover art + centred poster."""
-    if not HAS_PIL:
+    mods = _pil_modules()
+    if mods is None:
         return None
+    Image, ImageEnhance, ImageFilter = mods
+    lanczos = getattr(getattr(Image, "Resampling", Image), "LANCZOS", 1)
     out = os.path.join(OG_DIR, out_name)
     if os.path.exists(out):
         return "/img/og/" + out_name
@@ -312,7 +330,7 @@ def make_og_card(src_rel, out_name):
     W, H = 1200, 630
     scale = max(W / poster.width, H / poster.height)
     bg = poster.resize(
-        (max(1, int(poster.width * scale)), max(1, int(poster.height * scale))), Image.LANCZOS
+        (max(1, int(poster.width * scale)), max(1, int(poster.height * scale))), lanczos
     )
     left, top = (bg.width - W) // 2, (bg.height - H) // 2
     bg = bg.crop((left, top, left + W, top + H))
@@ -322,7 +340,7 @@ def make_og_card(src_rel, out_name):
 
     ph = H - 84
     pw = max(1, int(poster.width * ph / poster.height))
-    bg.paste(poster.resize((pw, ph), Image.LANCZOS), ((W - pw) // 2, 42))
+    bg.paste(poster.resize((pw, ph), lanczos), ((W - pw) // 2, 42))
 
     os.makedirs(OG_DIR, exist_ok=True)
     bg.save(out, "JPEG", quality=86, optimize=True, progressive=True)
@@ -542,7 +560,7 @@ PER_FILE_FIXUPS = {
 }
 
 
-def apply_text_fixups(html, page=None):
+def apply_text_fixups(html, page=""):
     for bad, good in TEXT_FIXUPS:
         html = html.replace(bad, good)
     for bad, good in PER_FILE_FIXUPS.get(page, []):

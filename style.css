@@ -836,6 +836,7 @@ h1, h2, h3, .display-font {
   margin-bottom: 16px;
   background: linear-gradient(135deg, #fff 30%, var(--purple-1) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .faq-header p {
@@ -873,7 +874,6 @@ h1, h2, h3, .display-font {
   cursor: pointer;
   list-style: none;
   display: flex;
-  justify-space: space-between;
   justify-content: space-between;
   align-items: center;
   user-select: none;

@@ -323,6 +323,8 @@ def main():
     spec = importlib.util.spec_from_file_location(
         "build_film_index", os.path.join(ROOT, "scripts", "build_film_index.py")
     )
+    if spec is None or spec.loader is None:
+        raise RuntimeError("unable to load build_film_index.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     films = mod.film_list()

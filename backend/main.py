@@ -3,17 +3,17 @@ import time
 import re
 import html
 try:
-    import bleach
+    import bleach  # pyright: ignore[reportMissingModuleSource]
     def sanitize_text(text: str) -> str:
         return bleach.clean(text, tags=[], strip=True)
 except ImportError:
     def sanitize_text(text: str) -> str:
         return html.escape(str(text or ""))
 
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-from werkzeug.utils import secure_filename
-from itsdangerous import URLSafeTimedSerializer, BadSignature, SignatureExpired
+from flask import Flask, request, jsonify  # pyright: ignore[reportMissingImports]
+from flask_cors import CORS  # pyright: ignore[reportMissingModuleSource]
+from werkzeug.utils import secure_filename  # pyright: ignore[reportMissingImports]
+from itsdangerous import URLSafeTimedSerializer, BadSignature, SignatureExpired  # pyright: ignore[reportMissingImports]
 from email_service import (
     send_email,
     get_admin_html,

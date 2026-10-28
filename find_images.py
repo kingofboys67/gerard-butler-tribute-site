@@ -2,12 +2,12 @@ import sys, os
 
 try:
     from PIL import Image
-    import numpy as np
+    import numpy as np  # pyright: ignore[reportMissingImports]
 except ImportError:
     import subprocess
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'Pillow', 'numpy'])
     from PIL import Image
-    import numpy as np
+    import numpy as np  # pyright: ignore[reportMissingImports]
 
 def dominant_color(image_path):
     try:
