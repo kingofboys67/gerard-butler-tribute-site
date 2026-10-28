@@ -5,7 +5,7 @@ import urllib.error
 import xml.etree.ElementTree as ET
 
 HOST = "www.gerardbutlerofficial.com"
-KEY = "8f4b6932b1234a90886a10de088b907c"
+KEY = "e92c24c09fd92b949e8f2342022e4cba"
 KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
 
