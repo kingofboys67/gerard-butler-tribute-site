@@ -15,19 +15,19 @@ panel is assembled from the Knowledge Graph, and the "official site" link comes 
 Measured today (Wikidata Q169982, 21 Sep 2026 revision):
 
 ```
-P856 (official website) : https://gerardbutler.net      <-- a third-party fan site, © 2001-2021
+P856 (official website) : https://gerardbutler.net      <-- a third-party community site, © 2001-2021
 P2003 (Instagram)       : gerardbutler
 P2013 (Facebook ID)     : GerardButler
 P345  (IMDb)            : nm0124930
 P2002 (X/Twitter)       : (none)
 ```
 
-So the panel's official link is occupied by another fan site. Yours cannot take that slot by
+So the panel's official link is currently occupied by another domain. Yours cannot take that slot by
 optimising harder; it takes one of these routes, in order of realism:
 
 | Route | What it requires | Realistic outcome |
 |---|---|---|
-| **A. Get the P856 statement corrected/removed** | A Wikidata account and a policy-based argument that a fan site is not an "official website" (Wikidata: P856 = *"the website of the item's subject"*). Use `Wikidata:Requests for deletions` or the item's talk page. | Achievable, sourced, and often accepted. Removes the competitor's claim — but does **not** hand you the slot. |
+| **A. Get the P856 statement corrected/removed** | A Wikidata account and a policy-based argument that a third-party community site is not an "official website" (Wikidata: P856 = *"the website of the item's subject"*). Use `Wikidata:Requests for deletions` or the item's talk page. | Achievable, sourced, and often accepted. Removes the competitor's claim — but does **not** hand you the slot. |
 | **B. Authorisation from Butler's team** | Written permission (manager/agency: Range Media Partners; publicist). Then: point his real channels at your domain, get the Wikipedia infobox updated with a citation, add Zoho/GSC brand verification. | The only route that ends with *your* domain as "official". Weeks-to-months; entirely relationship-driven. |
 | **C. Become the entity's de-facto reference** | Be the site that press, Wikipedia editors and AI models cite for filmography/streaming facts. Your site then appears in the panel's "Profiles"/social area rather than the official link. | Realistic and worth doing — this is §3 and §4. |
 
@@ -101,7 +101,7 @@ Target list, roughly in order of value per hour spent:
 | **Wikidata (cautious)** | Entity graph | Only policy-valid edits with sources (e.g. P2002 X handle if he has one). Never your own domain. |
 
 **Do not:** buy links, use PBNs, run "guest post" mills, or mass-submit to directories. A
-51-page fansite with bought links is a manual-action magnet.
+A 50-page site with bought links is a manual-action magnet.
 
 ---
 
@@ -112,7 +112,7 @@ rank for the head terms. Highest-leverage additions, in order:
 
 1. **`/where-to-watch`** — one page, every film, streaming service by region, with
    `StreamingService`/`Offer` data. This is the single biggest commercial query cluster and no
-   fan site owns it well.
+   site owns it well today.
 2. **`/facts`** — height, birth date/place, family, education, G-BASE, awards, notable quotes,
    each with a source line. Directly matches how AI answers are phrased.
 3. **`/upcoming`** — Greenland 2: Migration, Empire City, Blue Zeus and any announced project,
@@ -140,7 +140,7 @@ the same 10 questions monthly), Core Web Vitals field data. Double down on what 
 
 **KPIs that matter:** indexed pages (target 50/50), GSC impressions for "gerard butler
 filmography" cluster, #1–3 positions on film-level queries, AI citation count per month.
-Not: "position 1 for Gerard Butler" — that's Wikipedia/IMDb territory for an independent site.
+Not: "position 1 for Gerard Butler" — that slot belongs to Wikipedia/IMDb.
 
 ---
 

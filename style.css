@@ -1335,3 +1335,13 @@ h1, h2, h3, .display-font {
 @media (max-width: 640px) {
   .film-nav-prevnext { flex-direction: column; align-items: stretch; text-align: center; }
 }
+
+/* Reference pages in the primary nav: keep 10 items on one line down to tablet */
+@media (max-width: 1360px) {
+  .nav-links { gap: 18px; padding: 10px 20px; }
+  .nav-links a { font-size: 14px; }
+}
+@media (max-width: 1100px) {
+  .nav-links { gap: 12px; padding: 8px 14px; }
+  .nav-links a { font-size: 13px; }
+}

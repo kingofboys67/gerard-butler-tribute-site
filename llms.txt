@@ -48,6 +48,11 @@
 ## Extended Plaintext Reference
 - **Full Text Bio & FAQ**: https://www.gerardbutlerofficial.com/llms-full.txt
 
+## Reference Pages (generated)
+- **Gerard Butler Facts** (age, height, birthplace, education, awards, G-BASE): https://www.gerardbutlerofficial.com/facts
+- **Where to Watch** (streaming index for all 32 films + franchise watch orders): https://www.gerardbutlerofficial.com/where-to-watch
+- **Upcoming Projects** (How to Train Your Dragon 2, Empire City, Night Has Fallen, The Nest): https://www.gerardbutlerofficial.com/upcoming
+
 ## Complete Filmography (generated)
 - **300 (2006)**: https://www.gerardbutlerofficial.com/movie-300 — Gerard Butler as King Leonidas; directed by Zack Snyder
 - **300: Rise Of An Empire (2014)**: https://www.gerardbutlerofficial.com/movie-300-rise-of-an-empire — Gerard Butler as King Leonidas (cameo); directed by Noam Murro

@@ -19,7 +19,7 @@ import sys
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STEPS = ["seo_hardening.py", "build_film_index.py", "build_seo_files.py"]
+STEPS = ["build_reference_pages.py", "seo_hardening.py", "build_film_index.py", "build_seo_files.py"]
 
 
 def run(script):
