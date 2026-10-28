@@ -91,14 +91,27 @@ def visible_text(html):
 def shorten(text, limit=158):
     """Trim to <= limit chars on a word (ideally sentence) boundary."""
     text = re.sub(r"\s+", " ", text or "").strip()
-    if len(text) <= limit:
+    if not text:
         return text
-    window = text[:limit]
-    stop = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
-    if stop > 90:
-        return window[: stop + 1]
-    cut = window[: window.rfind(" ")].rstrip(" ,;:-–—")
-    return cut
+    if len(text) > limit:
+        window = text[:limit]
+        stop = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
+        if stop > 90:
+            text = window[: stop + 1]
+        else:
+            text = window[: window.rfind(" ")]
+    text = text.rstrip(" ,;:-–—")
+    filler = {
+        "a", "an", "the", "and", "or", "of", "in", "on", "with", "from", "by", "to",
+        "his", "her", "its", "their", "as", "at", "for", "that", "which", "who",
+    }
+    words = text.split(" ")
+    while words and (words[-1].lower() in filler or words[-1].endswith("'s")):
+        words.pop()
+    text = " ".join(words)
+    if text and not text.endswith((".", "!", "?", "…", '"', "”")):
+        text += "."
+    return text
 
 
 # ----------------------------------------------------------------- descriptions
@@ -114,12 +127,17 @@ def source_copy(html):
     return ""
 
 
-def build_description(html, title):
+def build_description(html, title, page=""):
     current = re.search(
-        r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']', html, re.I | re.S
+        r'<meta[^>]+name="description"[^>]+content="([^"]*)"', html, re.I | re.S
     )
     current = current.group(1).strip() if current else ""
-    if 120 <= len(current) <= 160 and not current.endswith(("...", "..", "…")):
+    cur = current.rstrip()
+    if (
+        120 <= len(cur) <= 160
+        and cur.endswith((".", "!", "?", '"', "”"))
+        and not cur.endswith(("...", "…"))
+    ):
         return current
     body = source_copy(html)
     if body:
@@ -136,13 +154,23 @@ def build_description(html, title):
     )
 
 
+def finalize_description(desc, page, title):
+    """Clamp to SERP limits and top up short movie descriptions with real page facts."""
+    desc = desc.strip()
+    if page.startswith("movie-") and len(desc) < 118:
+        desc = desc.rstrip(".") + ". Includes trailer and streaming options."
+    if len(desc) > 160:
+        desc = shorten(desc, 160)
+    return desc
+
+
 # ------------------------------------------------------------ social meta cleanup
 def dedupe_social_meta(html):
     """Keep only the first instance of each twitter:*/og:* meta property."""
     seen = set()
 
     def repl(m):
-        key = (m.group(1).lower(), m.group(2).lower())
+        key = m.group(1).lower()
         if key in seen:
             return ""
         seen.add(key)
@@ -162,21 +190,21 @@ def dedupe_social_meta(html):
 def sync_social_copy(html, desc, title):
     """Make og/twitter descriptions and titles agree with the canonical pair."""
     html = re.sub(
-        r'(<meta[^>]+property=["\']og:description["\'][^>]+content=["\']).*?(["\'][^>]*>)',
+        r'(<meta[^>]+property="og:description"[^>]+content=").*?(">)',
         lambda m: m.group(1) + desc + m.group(2),
         html,
         count=1,
         flags=re.I | re.S,
     )
     html = re.sub(
-        r'(<meta[^>]+name=["\']twitter:description["\'][^>]+content=["\']).*?(["\'][^>]*>)',
+        r'(<meta[^>]+name="twitter:description"[^>]+content=").*?(">)',
         lambda m: m.group(1) + desc + m.group(2),
         html,
         count=1,
         flags=re.I | re.S,
     )
     html = re.sub(
-        r'(<meta[^>]+name=["\']twitter:title["\'][^>]+content=["\']).*?(["\'][^>]*>)',
+        r'(<meta[^>]+name="twitter:title"[^>]+content=").*?(">)',
         lambda m: m.group(1) + (title or "") + m.group(2),
         html,
         count=1,
@@ -239,6 +267,8 @@ def fix_image_tags(html, page):
 
         if not additions:
             return tag
+        if tag.rstrip().endswith("/>"):
+            return tag.rstrip()[:-2].rstrip() + " " + " ".join(additions) + " />"
         return tag[:-1].rstrip() + " " + " ".join(additions) + ">"
 
     html = IMG_RE.sub(repl, html)
@@ -293,7 +323,7 @@ def make_og_card(src_rel, out_name):
 def fix_og_image(html, page):
     """Point og:image/twitter:image at a real 1200x630 asset with correct dims."""
     m = re.search(
-        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html, re.I
+        r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', html, re.I
     )
     if not m:
         return html
@@ -310,8 +340,8 @@ def fix_og_image(html, page):
 
     new_url = BASE + card
     for pattern in (
-        r'(<meta[^>]+property=["\']og:image["\'][^>]+content=["\']).*?(["\'])',
-        r'(<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']).*?(["\'])',
+        r'(<meta[^>]+property="og:image"[^>]+content=").*?(">)',
+        r'(<meta[^>]+name="twitter:image"[^>]+content=").*?(">)',
     ):
         html = re.sub(
             pattern,
@@ -323,7 +353,7 @@ def fix_og_image(html, page):
     for prop, val in (("og:image:width", "1200"), ("og:image:height", "630")):
         if prop in html:
             html = re.sub(
-                r'(<meta[^>]+property=["\']%s["\'][^>]+content=["\']).*?(["\'])' % prop,
+                r'(<meta[^>]+property="%s"[^>]+content=").*?(">)' % prop,
                 lambda mm: mm.group(1) + val + mm.group(2),
                 html,
                 count=1,
@@ -399,6 +429,12 @@ def footer_index_html():
     )
 
 
+DISCLOSURE = (
+    '<span class="footer-disclosure">Independent fan archive &mdash; not affiliated with '
+    "Gerard Butler, his management or his representatives.</span>"
+)
+
+
 def update_footer(html):
     if '<span class="last-updated-date">' in html:
         today = date.today()
@@ -415,10 +451,38 @@ def update_footer(html):
         html = html.replace(
             '<div class="footer-copy">', footer_index_html() + '\n      <div class="footer-copy">', 1
         )
+    if "footer-disclosure" not in html and '<div class="footer-copy">' in html:
+        html = html.replace(
+            '<div class="footer-copy">', '<div class="footer-copy">\n        ' + DISCLOSURE, 1
+        )
     return html
 
 
 # ---------------------------------------------------------------------- pipeline
+# ---------------------------------------------------------------- text fix-ups
+TEXT_FIXUPS = [
+    ("Nim'S Island", "Nim's Island"),
+    ("Nim'S", "Nim's"),
+    ("Gerard Butler Official Fan Hub", "Gerard Butler Archive"),
+]
+
+# Pages where the generator emitted a placeholder instead of a real credit.
+PER_FILE_FIXUPS = {
+    "movie-300-rise-of-an-empire.html": [("Acclaimed Filmmaker", "Noam Murro")],
+    "movie-lara-croft-cradle-of-life.html": [("Acclaimed Filmmaker", "Jan de Bont")],
+    "movie-nim-s-island.html": [("Acclaimed Filmmaker", "Jennifer Flackett and Mark Levin")],
+    "movie-phantom-of-the-opera.html": [("Acclaimed Filmmaker", "Joel Schumacher")],
+}
+
+
+def apply_text_fixups(html, page=None):
+    for bad, good in TEXT_FIXUPS:
+        html = html.replace(bad, good)
+    for bad, good in PER_FILE_FIXUPS.get(page, []):
+        html = html.replace(bad, good)
+    return html
+
+
 def main():
     changed = 0
     for page in public_pages():
@@ -430,10 +494,12 @@ def main():
         title = visible_text(title_m.group(1)) if title_m else ""
 
         html = dedupe_social_meta(html)
-        desc = build_description(html, title)
+        html = apply_text_fixups(html, page)
+        desc = build_description(html, title, page)
+        desc = finalize_description(desc, page, title)
         desc_attr = desc.replace("&", "&amp;").replace('"', "&quot;")
         html = re.sub(
-            r'(<meta[^>]+name=["\']description["\'][^>]+content=["\']).*?(["\'])',
+            r'(<meta[^>]+name="description"[^>]+content=").*?(">)',
             lambda m: m.group(1) + desc_attr + m.group(2),
             html,
             count=1,

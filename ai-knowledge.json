@@ -1,0 +1,304 @@
+{
+  "@context": "https://schema.org",
+  "generated": "2026-10-28",
+  "source": "https://www.gerardbutlerofficial.com/",
+  "note": "Editorial archive. Film titles and credits are factual data; site copy is original.",
+  "entity": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.gerardbutlerofficial.com/#gerardbutler",
+    "name": "Gerard Butler",
+    "alternateName": "Gerard James Butler",
+    "birthDate": "1969-11-13",
+    "birthPlace": "Paisley, Renfrewshire, Scotland",
+    "nationality": "Scottish",
+    "jobTitle": [
+      "Actor",
+      "Film producer"
+    ],
+    "yearsActive": "1992-present",
+    "url": "https://www.gerardbutlerofficial.com/",
+    "alumniOf": [
+      "University of Glasgow",
+      "Royal Conservatoire of Scotland"
+    ],
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Gerard_Butler",
+      "https://www.wikidata.org/wiki/Q169982",
+      "https://www.imdb.com/name/nm0124930/",
+      "https://www.instagram.com/gerardbutler/",
+      "https://www.facebook.com/gerardbutler/",
+      "https://x.com/GerardButler"
+    ]
+  },
+  "knownFor": [
+    "300 (2006) - King Leonidas",
+    "The Phantom of the Opera (2004) - Erik, the Phantom",
+    "Olympus Has Fallen (2013) - Mike Banning",
+    "London Has Fallen (2016) - Mike Banning",
+    "Angel Has Fallen (2019) - Mike Banning",
+    "How to Train Your Dragon (2010-2025) - Stoick the Vast",
+    "P.S. I Love You (2007) - Gerry Kennedy",
+    "Law Abiding Citizen (2009) - Clyde Shelton",
+    "Den of Thieves (2018) - Big Nick",
+    "Greenland (2020) - John Garrity"
+  ],
+  "frequentlyAskedQuestions": [
+    {
+      "question": "Who is Gerard Butler?",
+      "answer": "Gerard James Butler is a Scottish actor and film producer born on 13 November 1969 in Paisley, Renfrewshire, Scotland. He studied law at the University of Glasgow before training at the Royal Conservatoire of Scotland and turning to acting in the mid-1990s."
+    },
+    {
+      "question": "What is Gerard Butler best known for?",
+      "answer": "He is best known for playing King Leonidas in 300 (2006), Secret Service agent Mike Banning in the Has Fallen series (Olympus, London and Angel Has Fallen), Stoick the Vast in the How to Train Your Dragon films, and the Phantom in The Phantom of the Opera (2004)."
+    },
+    {
+      "question": "How many films has Gerard Butler made?",
+      "answer": "Gerard Butler has appeared in more than 40 feature films since 1997, spanning action, drama, animation and musicals. This archive documents 32 of his feature films with individual pages."
+    },
+    {
+      "question": "What charity does Gerard Butler support?",
+      "answer": "Gerard Butler is a long-standing ambassador for Mary's Meals, the Scottish charity that provides school meals to children in the world's poorest communities, and he has supported disaster relief through organisations such as Direct Relief."
+    },
+    {
+      "question": "Is there an official Gerard Butler website?",
+      "answer": "gerardbutlerofficial.com is an independent archive documenting Gerard Butler's filmography, career and charitable work. It links to his verified social accounts and is not operated by the actor or his representatives."
+    }
+  ],
+  "keyPages": {
+    "home": "https://www.gerardbutlerofficial.com/",
+    "biography": "https://www.gerardbutlerofficial.com/about",
+    "filmography": "https://www.gerardbutlerofficial.com/films",
+    "videos": "https://www.gerardbutlerofficial.com/reels",
+    "gallery": "https://www.gerardbutlerofficial.com/gallery",
+    "news": "https://www.gerardbutlerofficial.com/news",
+    "charity": "https://www.gerardbutlerofficial.com/charity",
+    "fanclub": "https://www.gerardbutlerofficial.com/fanclub"
+  },
+  "filmography": [
+    {
+      "title": "Den Of Thieves 2",
+      "year": 2024,
+      "character": "Big Nick O'Brien",
+      "director": "Christian Gudegast",
+      "url": "https://www.gerardbutlerofficial.com/movie-den-of-thieves-2"
+    },
+    {
+      "title": "Kandahar",
+      "year": 2023,
+      "character": "Tom Harris",
+      "director": "Ric Roman Waugh",
+      "url": "https://www.gerardbutlerofficial.com/movie-kandahar"
+    },
+    {
+      "title": "Plane",
+      "year": 2023,
+      "character": "Brodie Torrance",
+      "director": "Jean-François Richet",
+      "url": "https://www.gerardbutlerofficial.com/movie-plane"
+    },
+    {
+      "title": "Last Seen Alive",
+      "year": 2022,
+      "character": "Will Spann",
+      "director": "Brian Goodman",
+      "url": "https://www.gerardbutlerofficial.com/movie-last-seen-alive"
+    },
+    {
+      "title": "Copshop",
+      "year": 2021,
+      "character": "Bob Viddick",
+      "director": "Joe Carnahan",
+      "url": "https://www.gerardbutlerofficial.com/movie-copshop"
+    },
+    {
+      "title": "Greenland",
+      "year": 2020,
+      "character": "John Garrity",
+      "director": "Ric Roman Waugh",
+      "url": "https://www.gerardbutlerofficial.com/movie-greenland"
+    },
+    {
+      "title": "Angel Has Fallen",
+      "year": 2019,
+      "character": "Mike Banning",
+      "director": "Ric Roman Waugh",
+      "url": "https://www.gerardbutlerofficial.com/movie-angel-has-fallen"
+    },
+    {
+      "title": "Httyd: The Hidden World",
+      "year": 2019,
+      "character": "Stoick the Vast (Voice)",
+      "director": "Dean DeBlois",
+      "url": "https://www.gerardbutlerofficial.com/movie-httyd-the-hidden-world"
+    },
+    {
+      "title": "Den Of Thieves",
+      "year": 2018,
+      "character": "Big Nick O'Brien",
+      "director": "Christian Gudegast",
+      "url": "https://www.gerardbutlerofficial.com/movie-den-of-thieves"
+    },
+    {
+      "title": "Hunter Killer",
+      "year": 2018,
+      "character": "Captain Joe Glass",
+      "director": "Donovan Marsh",
+      "url": "https://www.gerardbutlerofficial.com/movie-hunter-killer"
+    },
+    {
+      "title": "The Vanishing",
+      "year": 2018,
+      "character": "Donald MacLeod",
+      "director": "Kristoffer Nyholm",
+      "url": "https://www.gerardbutlerofficial.com/movie-the-vanishing"
+    },
+    {
+      "title": "Geostorm",
+      "year": 2017,
+      "character": "Jake Lawson",
+      "director": "Dean Devlin",
+      "url": "https://www.gerardbutlerofficial.com/movie-geostorm"
+    },
+    {
+      "title": "A Family Man",
+      "year": 2016,
+      "character": "Dane Jensen",
+      "director": "Mark Williams",
+      "url": "https://www.gerardbutlerofficial.com/movie-a-family-man"
+    },
+    {
+      "title": "Gods Of Egypt",
+      "year": 2016,
+      "character": "Set",
+      "director": "Alex Proyas",
+      "url": "https://www.gerardbutlerofficial.com/movie-gods-of-egypt"
+    },
+    {
+      "title": "London Has Fallen",
+      "year": 2016,
+      "character": "Mike Banning",
+      "director": "Babak Najafi",
+      "url": "https://www.gerardbutlerofficial.com/movie-london-has-fallen"
+    },
+    {
+      "title": "300: Rise Of An Empire",
+      "year": 2014,
+      "character": "King Leonidas (cameo)",
+      "director": "Noam Murro",
+      "url": "https://www.gerardbutlerofficial.com/movie-300-rise-of-an-empire"
+    },
+    {
+      "title": "Olympus Has Fallen",
+      "year": 2013,
+      "character": "Mike Banning",
+      "director": "Antoine Fuqua",
+      "url": "https://www.gerardbutlerofficial.com/movie-olympus-has-fallen"
+    },
+    {
+      "title": "Chasing Mavericks",
+      "year": 2012,
+      "character": "Frosty Hesson",
+      "director": "Curtis Hanson and Michael Apted",
+      "url": "https://www.gerardbutlerofficial.com/movie-chasing-mavericks"
+    },
+    {
+      "title": "Machine Gun Preacher",
+      "year": 2011,
+      "character": "Sam Childers",
+      "director": "Marc Forster",
+      "url": "https://www.gerardbutlerofficial.com/movie-machine-gun-preacher"
+    },
+    {
+      "title": "How To Train Your Dragon",
+      "year": 2010,
+      "character": "Stoick the Vast (Voice)",
+      "director": "Dean DeBlois",
+      "url": "https://www.gerardbutlerofficial.com/movie-how-to-train-your-dragon"
+    },
+    {
+      "title": "The Bounty Hunter",
+      "year": 2010,
+      "character": "Milo Boyd",
+      "director": "Andy Tennant",
+      "url": "https://www.gerardbutlerofficial.com/movie-the-bounty-hunter"
+    },
+    {
+      "title": "Gamer",
+      "year": 2009,
+      "character": "Kable",
+      "director": "Mark Neveldine and Brian Taylor",
+      "url": "https://www.gerardbutlerofficial.com/movie-gamer"
+    },
+    {
+      "title": "Law Abiding Citizen",
+      "year": 2009,
+      "character": "Clyde Shelton",
+      "director": "F. Gary Gray",
+      "url": "https://www.gerardbutlerofficial.com/movie-law-abiding-citizen"
+    },
+    {
+      "title": "The Ugly Truth",
+      "year": 2009,
+      "character": "Mike Chadway",
+      "director": "Robert Luketic",
+      "url": "https://www.gerardbutlerofficial.com/movie-the-ugly-truth"
+    },
+    {
+      "title": "Nim's Island",
+      "year": 2008,
+      "character": "Jack Rusoe / Alex Rover",
+      "director": "Jennifer Flackett and Mark Levin",
+      "url": "https://www.gerardbutlerofficial.com/movie-nim-s-island"
+    },
+    {
+      "title": "Rocknrolla",
+      "year": 2008,
+      "character": "One Two",
+      "director": "Guy Ritchie",
+      "url": "https://www.gerardbutlerofficial.com/movie-rocknrolla"
+    },
+    {
+      "title": "P.S. I Love You",
+      "year": 2007,
+      "character": "Gerry Kennedy",
+      "director": "Richard LaGravenese",
+      "url": "https://www.gerardbutlerofficial.com/movie-p-s-i-love-you"
+    },
+    {
+      "title": "300",
+      "year": 2006,
+      "character": "King Leonidas",
+      "director": "Zack Snyder",
+      "url": "https://www.gerardbutlerofficial.com/movie-300"
+    },
+    {
+      "title": "Dear Frankie",
+      "year": 2004,
+      "character": "The Stranger",
+      "director": "Shona Auerbach",
+      "url": "https://www.gerardbutlerofficial.com/movie-dear-frankie"
+    },
+    {
+      "title": "Phantom Of The Opera",
+      "year": 2004,
+      "character": "The Phantom",
+      "director": "Joel Schumacher",
+      "url": "https://www.gerardbutlerofficial.com/movie-phantom-of-the-opera"
+    },
+    {
+      "title": "Lara Croft: Cradle Of Life",
+      "year": 2003,
+      "character": "Terry Sheridan",
+      "director": "Jan de Bont",
+      "url": "https://www.gerardbutlerofficial.com/movie-lara-croft-cradle-of-life"
+    },
+    {
+      "title": "Reign Of Fire",
+      "year": 2002,
+      "character": "Creedy",
+      "director": "Rob Bowman",
+      "url": "https://www.gerardbutlerofficial.com/movie-reign-of-fire"
+    }
+  ]
+}

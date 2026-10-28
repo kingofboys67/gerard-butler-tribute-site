@@ -47,3 +47,47 @@
 
 ## Extended Plaintext Reference
 - **Full Text Bio & FAQ**: https://www.gerardbutlerofficial.com/llms-full.txt
+
+## Complete Filmography (generated)
+- **300 (2006)**: https://www.gerardbutlerofficial.com/movie-300 — Gerard Butler as King Leonidas; directed by Zack Snyder
+- **300: Rise Of An Empire (2014)**: https://www.gerardbutlerofficial.com/movie-300-rise-of-an-empire — Gerard Butler as King Leonidas (cameo); directed by Noam Murro
+- **A Family Man (2016)**: https://www.gerardbutlerofficial.com/movie-a-family-man — Gerard Butler as Dane Jensen; directed by Mark Williams
+- **Angel Has Fallen (2019)**: https://www.gerardbutlerofficial.com/movie-angel-has-fallen — Gerard Butler as Mike Banning; directed by Ric Roman Waugh
+- **Chasing Mavericks (2012)**: https://www.gerardbutlerofficial.com/movie-chasing-mavericks — Gerard Butler as Frosty Hesson; directed by Curtis Hanson and Michael Apted
+- **Copshop (2021)**: https://www.gerardbutlerofficial.com/movie-copshop — Gerard Butler as Bob Viddick; directed by Joe Carnahan
+- **Dear Frankie (2004)**: https://www.gerardbutlerofficial.com/movie-dear-frankie — Gerard Butler as The Stranger; directed by Shona Auerbach
+- **Den Of Thieves (2018)**: https://www.gerardbutlerofficial.com/movie-den-of-thieves — Gerard Butler as Big Nick O'Brien; directed by Christian Gudegast
+- **Den Of Thieves 2 (2024)**: https://www.gerardbutlerofficial.com/movie-den-of-thieves-2 — Gerard Butler as Big Nick O'Brien; directed by Christian Gudegast
+- **Gamer (2009)**: https://www.gerardbutlerofficial.com/movie-gamer — Gerard Butler as Kable; directed by Mark Neveldine and Brian Taylor
+- **Geostorm (2017)**: https://www.gerardbutlerofficial.com/movie-geostorm — Gerard Butler as Jake Lawson; directed by Dean Devlin
+- **Gods Of Egypt (2016)**: https://www.gerardbutlerofficial.com/movie-gods-of-egypt — Gerard Butler as Set; directed by Alex Proyas
+- **Greenland (2020)**: https://www.gerardbutlerofficial.com/movie-greenland — Gerard Butler as John Garrity; directed by Ric Roman Waugh
+- **How To Train Your Dragon (2010)**: https://www.gerardbutlerofficial.com/movie-how-to-train-your-dragon — Gerard Butler as Stoick the Vast (Voice); directed by Dean DeBlois
+- **Httyd: The Hidden World (2019)**: https://www.gerardbutlerofficial.com/movie-httyd-the-hidden-world — Gerard Butler as Stoick the Vast (Voice); directed by Dean DeBlois
+- **Hunter Killer (2018)**: https://www.gerardbutlerofficial.com/movie-hunter-killer — Gerard Butler as Captain Joe Glass; directed by Donovan Marsh
+- **Kandahar (2023)**: https://www.gerardbutlerofficial.com/movie-kandahar — Gerard Butler as Tom Harris; directed by Ric Roman Waugh
+- **Lara Croft: Cradle Of Life (2003)**: https://www.gerardbutlerofficial.com/movie-lara-croft-cradle-of-life — Gerard Butler as Terry Sheridan; directed by Jan de Bont
+- **Last Seen Alive (2022)**: https://www.gerardbutlerofficial.com/movie-last-seen-alive — Gerard Butler as Will Spann; directed by Brian Goodman
+- **Law Abiding Citizen (2009)**: https://www.gerardbutlerofficial.com/movie-law-abiding-citizen — Gerard Butler as Clyde Shelton; directed by F. Gary Gray
+- **London Has Fallen (2016)**: https://www.gerardbutlerofficial.com/movie-london-has-fallen — Gerard Butler as Mike Banning; directed by Babak Najafi
+- **Machine Gun Preacher (2011)**: https://www.gerardbutlerofficial.com/movie-machine-gun-preacher — Gerard Butler as Sam Childers; directed by Marc Forster
+- **Nim's Island (2008)**: https://www.gerardbutlerofficial.com/movie-nim-s-island — Gerard Butler as Jack Rusoe / Alex Rover; directed by Jennifer Flackett and Mark Levin
+- **Olympus Has Fallen (2013)**: https://www.gerardbutlerofficial.com/movie-olympus-has-fallen — Gerard Butler as Mike Banning; directed by Antoine Fuqua
+- **P.S. I Love You (2007)**: https://www.gerardbutlerofficial.com/movie-p-s-i-love-you — Gerard Butler as Gerry Kennedy; directed by Richard LaGravenese
+- **Phantom Of The Opera (2004)**: https://www.gerardbutlerofficial.com/movie-phantom-of-the-opera — Gerard Butler as The Phantom; directed by Joel Schumacher
+- **Plane (2023)**: https://www.gerardbutlerofficial.com/movie-plane — Gerard Butler as Brodie Torrance; directed by Jean-François Richet
+- **Reign Of Fire (2002)**: https://www.gerardbutlerofficial.com/movie-reign-of-fire — Gerard Butler as Creedy; directed by Rob Bowman
+- **Rocknrolla (2008)**: https://www.gerardbutlerofficial.com/movie-rocknrolla — Gerard Butler as One Two; directed by Guy Ritchie
+- **The Bounty Hunter (2010)**: https://www.gerardbutlerofficial.com/movie-the-bounty-hunter — Gerard Butler as Milo Boyd; directed by Andy Tennant
+- **The Ugly Truth (2009)**: https://www.gerardbutlerofficial.com/movie-the-ugly-truth — Gerard Butler as Mike Chadway; directed by Robert Luketic
+- **The Vanishing (2018)**: https://www.gerardbutlerofficial.com/movie-the-vanishing — Gerard Butler as Donald MacLeod; directed by Kristoffer Nyholm
+
+## Entity Summary
+Gerard James Butler (born 13 November 1969, Paisley, Scotland) is a Scottish actor and film producer, known for 300 (2006), the Has Fallen trilogy, How to Train Your Dragon and The Phantom of the Opera (2004). Long-time ambassador for Mary's Meals. Verified profiles: https://en.wikipedia.org/wiki/Gerard_Butler, https://www.wikidata.org/wiki/Q169982, https://www.imdb.com/name/nm0124930/
+
+## Machine-readable data
+- Structured facts: https://www.gerardbutlerofficial.com/ai-knowledge.json
+- Full knowledge base: https://www.gerardbutlerofficial.com/llms-full.txt
+- Sitemap: https://www.gerardbutlerofficial.com/sitemap.xml
+
+_Last generated: 2026-10-28_

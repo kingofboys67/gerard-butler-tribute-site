@@ -100,22 +100,16 @@ def audit_page(path):
     url = BASE + "/" if name == "index.html" else "%s/%s" % (BASE, name[:-5])
 
     title = get_meta(html, r"<title[^>]*>(.*?)</title>")
-    desc = get_meta(html, r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']')
-    if desc is None:
-        desc = get_meta(
-            html, r'<meta[^>]+content=["\'](.*?)["\'][^>]+name=["\']description["\']'
-        )
-    canonical = get_meta(html, r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\'](.*?)["\']')
+    desc = get_meta(html, r'<meta[^>]+name="description"[^>]+content="([^"]*)"')
+    if not desc:
+        desc = get_meta(html, r'<meta[^>]+content="([^"]*)"[^>]+name="description"')
+    canonical = get_meta(html, r'<link[^>]+rel="canonical"[^>]+href="([^"]*)"')
 
-    og_titles = re.findall(
-        r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\'](.*?)["\']', html, re.I | re.S
-    )
-    og_imgs = re.findall(
-        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\'](.*?)["\']', html, re.I | re.S
-    )
-    tw_cards = re.findall(r'<meta[^>]+name=["\']twitter:card["\']', html, re.I)
+    og_titles = re.findall(r'<meta[^>]+property="og:title"[^>]+content="([^"]*)"', html, re.I | re.S)
+    og_imgs = re.findall(r'<meta[^>]+property="og:image"[^>]+content="([^"]*)"', html, re.I | re.S)
+    tw_cards = re.findall(r'<meta[^>]+name="twitter:card"', html, re.I)
     tw_titles = re.findall(
-        r'<meta[^>]+name=["\']twitter:title["\'][^>]+content=["\'](.*?)["\']', html, re.I | re.S
+        r'<meta[^>]+name="twitter:title"[^>]+content="([^"]*)"', html, re.I | re.S
     )
 
     h1_text = [
