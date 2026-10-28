@@ -239,7 +239,7 @@ def update_film_page(f, prev_f, next_f, total):
             html = html[:start] + html[end + len("</section>"):].lstrip("\n")
     # repair pages where an earlier build swallowed the closing </main>
     if "</main>" not in html:
-        for anchor in ('\n\n  <!-- FOOTER -->', "\n\n<!-- FOOTER -->", "<footer"):
+        for anchor in ('\n\n  <!-- FOOTER -->', "\n\n<!-- FOOTER -->"):
             if anchor in html:
                 html = html.replace(anchor, "\n\n  </main>" + anchor, 1)
                 break
