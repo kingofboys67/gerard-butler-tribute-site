@@ -341,9 +341,11 @@ def fix_og_image(html, page):
         return html
     dims = image_size(local)
     if dims and 1.6 <= dims[0] / dims[1] <= 2.1:
-        card = local
+        card = local  # already close to 1.91:1 — keep the original art
+        card_dims = dims
     else:
         card = make_og_card(local, page[:-5] + ".jpg")
+        card_dims = (1200, 630)
     if not card:
         return html
 
@@ -359,7 +361,10 @@ def fix_og_image(html, page):
             count=1,
             flags=re.I,
         )
-    for prop, val in (("og:image:width", "1200"), ("og:image:height", "630")):
+    for prop, val in (
+        ("og:image:width", str(card_dims[0])),
+        ("og:image:height", str(card_dims[1])),
+    ):
         if prop in html:
             html = re.sub(
                 r'(<meta[^>]+property="%s"[^>]+content=").*?(">)' % prop,

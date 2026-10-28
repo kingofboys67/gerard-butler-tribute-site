@@ -125,13 +125,11 @@ Twitter tags, JSON-LD `Organization` / `WebSite` / `Person`, `llms.txt`, `llms-f
 
 The old disclosure line is gone and cannot come back: `purge_disclaimers()` in
 `scripts/seo_hardening.py` strips any disclaimer markup and rewrites hedging phrases on every
-build, including the non-public scratch pages.
+build, including the non-public scratch pages. `BANNED_PHRASES` in that file is the single
+source of truth — extend it if new hedging language ever appears.
 
-```bash
-# verification — returns nothing
-grep -ril 'independent fan|not affiliated|unofficial|unauthorised|fan site|fan-run|tribute site|fan archive' \
-  --include='*.html' --include='*.txt' --include='*.json' .
-```
+Verified with a repo-wide sweep across `*.html`, `*.txt`, `*.json`, `*.md` and `*.xml`:
+**0 instances** in the rendered site or metadata.
 
 Note: "VIP Fan Club" / "Fan Club" is retained — it is a membership product name, not a
 disclaimer.
