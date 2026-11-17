@@ -38,7 +38,7 @@
   <!-- Twitter -->
   <meta property="twitter:url" content="https://www.gerardbutlerofficial.com/">
 
-  <link rel="preload" as="image" href="img/img001.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="img/img020.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
@@ -200,84 +200,27 @@
         <a href="news">News</a>
         <a href="charity">Charity</a>
         <a href="fanclub">Fanclub</a>
-      <a href="facts">Facts</a>
-      <a href="where-to-watch">Watch</a>
-      <a href="upcoming">Upcoming</a>
+        <a href="facts">Facts</a>
+        <a href="where-to-watch">Watch</a>
+        <a href="upcoming">Upcoming</a>
       </div>
       <div class="hamburger">☰</div>
     </nav>
 
     <div class="hero-main">
       <h1 class="hero-headline">GERARD BUTLER</h1>
-      <picture>
-        <source srcset="img/img001.avif" type="image/avif">
-        <img src="img/img001.jpg" alt="Gerard Butler" class="hero-headshot" loading="eager" fetchpriority="high" width="1440" height="1800" decoding="async">
-      </picture>
-      
-      <div class="hero-left-subtitle">
-        An unstoppable force in modern cinema.
-      </div>
-      
-      <div class="hero-right-cluster">
-        <div class="play-cluster">
-          <div class="sphere-btn"></div>
-          <div class="starburst-btn">
-            <svg class="starburst-svg" viewBox="0 0 100 100">
-              <path d="M50 0 L57 32 L90 15 L68 43 L100 50 L68 57 L90 85 L57 68 L50 100 L43 68 L10 85 L32 57 L0 50 L32 43 L10 15 L43 32 Z" fill="white"/>
-            </svg>
-            <div class="play-triangle"></div>
-          </div>
+      <div class="hero-portrait-frame">
+        <img src="img/img020.jpg" alt="Gerard Butler" class="hero-headshot" loading="eager" fetchpriority="high" width="720" height="1080" decoding="async">
+        <div class="hero-cta-row">
+          <a href="#fanclub" class="hero-btn hero-btn-primary">Join Fan Club</a>
+          <a href="#explore" class="hero-btn hero-btn-secondary">Explore Page</a>
         </div>
-        <span class="cluster-label">HOW IT BEGINS</span>
-      </div>
-      
-      <div class="bottom-cards">
-        <div class="b-card b-card-1">
-          <h3>40+</h3>
-          <span>FILMS</span>
-        </div>
-        
-        <div class="b-card b-card-2">
-          <div>
-            <h3 class="card-title">Peak intensity!</h3>
-            <p class="card-subtitle">A cinematic force of nature.</p>
-          </div>
-          <div class="bcard-bottom">
-            <div class="circ-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/></svg>
-            </div>
-            <img loading="lazy" src="img/img002.jpg" alt="Action Shot" class="thumb-img" width="1080" height="1350" decoding="async">
-          </div>
-        </div>
-        
-        <div class="b-card b-card-3">
-          <div>
-            <h3 class="card-title">Box-office hits</h3>
-            <p class="card-subtitle">Consistently delivering action spectacles.</p>
-          </div>
-          <div class="bcard-bottom">
-            <div class="stat-outlined">30%</div>
-            <div style="display:flex; flex-direction:column;">
-              <a href="films" class="btn-pill">Watch Now</a>
-              <a href="about" class="link-more">More info ↗</a>
-            </div>
-          </div>
-        </div>
-        
-        <svg class="scroll-ribbon" viewBox="0 0 200 100">
-          <path id="curve" d="M 0,100 Q 100,-20 200,100" fill="transparent" />
-          <text font-family="'Archivo Black', sans-serif" font-size="16" fill="var(--ink)" letter-spacing="2">
-            <textPath href="#curve" startOffset="10%" text-anchor="start">
-              • SCROLL DOWN • SCROLL DOWN •
-            </textPath>
-          </text>
-        </svg>
       </div>
     </div>
   </section>
 
   <!-- EXPLORE SITE PREVIEWS -->
-  <section class="section explore-section" style="max-width: 1280px; margin: 0 auto; padding: 80px 24px;">
+  <section class="section explore-section" id="explore" style="max-width: 1280px; margin: 0 auto; padding: 80px 24px;">
     <div style="margin-bottom: 40px;">
       <h2 class="display-font" style="font-size: clamp(32px, 4vw, 48px);">Explore the site</h2>
       <p style="font-size: 18px; color: rgba(255,255,255,0.7);">Discover the complete Gerard Butler experience.</p>
@@ -376,7 +319,7 @@
   </section>
 
   <!-- ABOUT CTA -->
-  <section class="section" style="max-width: 1200px; margin: 40px auto; padding: 60px 40px; background: rgba(255,255,255,0.03); border-radius: 24px; display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+  <section class="section" id="about" style="max-width: 1200px; margin: 40px auto; padding: 60px 40px; background: rgba(255,255,255,0.03); border-radius: 24px; display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
     <div class="eyebrow" style="margin-bottom: 20px;">// THE LEGEND</div>
     <h2 class="display-font" style="font-size: clamp(32px, 5vw, 56px); margin-bottom: 24px;">Born in Paisley.<br>Made for the Screen.</h2>
     <p style="font-size: 18px; color: rgba(255,255,255,0.7); max-width: 600px; line-height: 1.6; margin-bottom: 32px;">Discover the incredible journey from studying law in Glasgow to becoming one of Hollywood's most bankable leading men.</p>
@@ -457,6 +400,44 @@
         <button id="download-og-btn" style="background: var(--mint); color: #000; border: none; font-family: 'Archivo Black', sans-serif; font-size: 13px; letter-spacing: 0.5px; padding: 12px 24px; border-radius: 25px; cursor: pointer; transition: 0.2s;">⬇ Download 1200&times;630 OG Card</button>
       </div>
       <div id="quote-feedback" style="margin-top: 12px; font-size: 13px; color: var(--mint); min-height: 20px;" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- OFFICIAL FAN CLUB SIGNUP SECTION -->
+  <section class="section fanclub-section" id="fanclub" style="max-width: 1200px; margin: 40px auto; padding: 80px 40px; background: var(--paper); border: 1px solid rgba(255,255,255,0.06);">
+    <div id="fan-club" style="max-width: 760px; margin: 0 auto 48px auto; text-align: center;">
+      <div class="eyebrow" style="margin-bottom: 16px;">// OFFICIAL COMMUNITY</div>
+      <h2 class="display-font" style="font-size: clamp(32px, 5vw, 52px); margin-bottom: 20px;">Join the Official Fan Club</h2>
+      <p style="font-size: 18px; color: rgba(255,255,255,0.75); line-height: 1.6;">
+        Register below to apply for official VIP membership, exclusive premiere passes, private screenings, and G-BASE charity auctions.
+      </p>
+    </div>
+
+    <div style="max-width: 600px; margin: 0 auto; background: rgba(0,0,0,0.5); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
+      <h3 class="display-font" style="margin-bottom: 28px; font-size: 28px; color: var(--mint); text-align: center;">Membership Application</h3>
+      <div id="home-form-toast" role="alert" aria-live="assertive" style="display: none; padding: 16px 20px; border-radius: 12px; margin-bottom: 24px; font-size: 15px; text-align: center; transition: all 0.3s ease;"></div>
+      <form id="home-fanclub-form">
+        <div class="form-group">
+          <label for="home-fanclub-name">Full Name</label>
+          <input type="text" id="home-fanclub-name" name="name" required aria-required="true" placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+          <label for="home-fanclub-email">Email Address</label>
+          <input type="email" id="home-fanclub-email" name="email" required aria-required="true" placeholder="jane@example.com">
+        </div>
+        <div class="form-group">
+          <label for="home-fanclub-tier">Requested Tier</label>
+          <input type="text" id="home-fanclub-tier" name="tier" placeholder="e.g. VIP Treatment, Meet &amp; Greet, Private Shows">
+        </div>
+        <div class="form-group">
+          <label for="home-fanclub-message">Why should you be selected?</label>
+          <textarea id="home-fanclub-message" name="message" rows="4" required aria-required="true" placeholder="Tell us about your fandom..."></textarea>
+        </div>
+        <button type="submit" id="home-fanclub-submit-btn" class="btn-primary" style="width: 100%; margin-top: 8px; background: var(--mint); color: #000; font-family: 'Archivo Black', sans-serif; text-transform: uppercase; letter-spacing: 0.05em;">Submit Fan Club Application</button>
+      </form>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="fanclub" style="color: rgba(255,255,255,0.7); font-size: 14px; text-decoration: underline;">Explore all VIP Fan Club tiers &amp; benefits →</a>
+      </div>
     </div>
   </section>
 

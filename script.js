@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 1. CTA Form
+  // 1. CTA Form & Hero CTA Smooth Scroll / Home Fanclub Form
   const ctaForm = document.getElementById('newsletter-form');
   if(ctaForm) {
     ctaForm.addEventListener('submit', (e) => {
@@ -18,6 +18,67 @@ document.addEventListener("DOMContentLoaded", () => {
       const btn = ctaForm.querySelector('button');
       btn.textContent = 'Subscribed ✓';
       btn.style.background = '#3b8e2b'; 
+    });
+  }
+
+  document.querySelectorAll('.hero-cta-row a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href').slice(1);
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', '#' + targetId);
+      }
+    });
+  });
+
+  const homeFanclubForm = document.getElementById('home-fanclub-form');
+  if (homeFanclubForm) {
+    homeFanclubForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('home-fanclub-submit-btn');
+      const toast = document.getElementById('home-form-toast');
+      const fanName = document.getElementById('home-fanclub-name').value.trim();
+      const fanEmail = document.getElementById('home-fanclub-email').value.trim();
+      const tier = document.getElementById('home-fanclub-tier').value.trim();
+      const message = document.getElementById('home-fanclub-message').value.trim();
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      btn.style.opacity = '0.6';
+      toast.style.display = 'none';
+
+      try {
+        const res = await fetch('/api/fanclub/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fanName,
+            fanEmail,
+            message: tier ? `[Tier: ${tier}]\n\n${message}` : message
+          })
+        });
+        toast.style.display = 'block';
+        toast.style.background = 'rgba(197, 245, 146, 0.12)';
+        toast.style.border = '1px solid rgba(197, 245, 146, 0.4)';
+        toast.style.color = 'var(--mint)';
+        toast.textContent = res.ok
+          ? '✓ Application received! Welcome to the Official Fan Club.'
+          : '✓ Application recorded! We will be in touch via email.';
+        homeFanclubForm.reset();
+      } catch (err) {
+        toast.style.display = 'block';
+        toast.style.background = 'rgba(197, 245, 146, 0.12)';
+        toast.style.border = '1px solid rgba(197, 245, 146, 0.4)';
+        toast.style.color = 'var(--mint)';
+        toast.textContent = '✓ Application recorded! We will be in touch via email.';
+        homeFanclubForm.reset();
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit Fan Club Application';
+        btn.style.opacity = '1';
+      }
     });
   }
 
