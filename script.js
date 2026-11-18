@@ -35,12 +35,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const homeFanclubForm = document.getElementById('home-fanclub-form');
   if (homeFanclubForm) {
+    const nameInput = document.getElementById('home-fanclub-name');
+    const phoneInput = document.getElementById('home-fanclub-phone');
+    const tierInput = document.getElementById('home-fanclub-tier');
+    const liveCardName = document.getElementById('live-card-name');
+    const liveCardPhone = document.getElementById('live-card-phone');
+    const liveCardTier = document.getElementById('live-card-tier-badge');
+
+    if (nameInput && liveCardName) {
+      nameInput.addEventListener('input', () => {
+        liveCardName.textContent = nameInput.value.trim().toUpperCase() || 'YOUR NAME HERE';
+      });
+    }
+    if (phoneInput && liveCardPhone) {
+      phoneInput.addEventListener('input', () => {
+        liveCardPhone.textContent = phoneInput.value.trim() || '+1 (•••) •••-••••';
+      });
+    }
+    if (tierInput && liveCardTier) {
+      tierInput.addEventListener('input', () => {
+        liveCardTier.textContent = tierInput.value.trim().toUpperCase() || 'VIP MEMBER';
+      });
+    }
+
     homeFanclubForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('home-fanclub-submit-btn');
       const toast = document.getElementById('home-form-toast');
       const fanName = document.getElementById('home-fanclub-name').value.trim();
       const fanEmail = document.getElementById('home-fanclub-email').value.trim();
+      const fanPhone = document.getElementById('home-fanclub-phone')?.value.trim() || '';
       const tier = document.getElementById('home-fanclub-tier').value.trim();
       const message = document.getElementById('home-fanclub-message').value.trim();
 
@@ -49,6 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.style.opacity = '0.6';
       toast.style.display = 'none';
 
+      const detailsPrefix = [
+        tier ? `[Tier: ${tier}]` : '',
+        fanPhone ? `[Phone: ${fanPhone}]` : ''
+      ].filter(Boolean).join(' ');
+
       try {
         const res = await fetch('/api/fanclub/messages', {
           method: 'POST',
@@ -56,7 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
           body: JSON.stringify({
             fanName,
             fanEmail,
-            message: tier ? `[Tier: ${tier}]\n\n${message}` : message
+            fanPhone,
+            message: detailsPrefix ? `${detailsPrefix}\n\n${message}` : message
           })
         });
         toast.style.display = 'block';

