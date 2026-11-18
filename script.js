@@ -329,14 +329,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (pagePreviewsContainer && pagePreviewsContainer.children.length === 0) {
     const pageCtas = [
       {
-        slug: 'films',
-        label: 'Filmography',
-        title: 'Films',
-        desc: 'Explore Gerard Butler\'s complete filmography, featuring over 40 films from 300 to Olympus Has Fallen.',
-        bullets: ['34+ Films', '$1.8B Box Office', 'Trailers'],
-        image: 'img/hall_action.png'
-      },
-      {
         slug: 'reels',
         label: 'Video Archive',
         title: 'Reels',
