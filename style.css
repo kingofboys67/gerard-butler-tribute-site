@@ -640,11 +640,9 @@ h1, h2, h3, .display-font {
   .marquee-content { font-size: 32px; }
 }
 
-/* --- 10. PREVIEW GRID & FEATURED FILMS SHOWCASE --- */
+/* --- 10. FEATURED FILMS SHOWCASE --- */
 .films-showcase-block {
-  margin-bottom: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 0;
 }
 
 .films-showcase-header {
@@ -796,95 +794,6 @@ h1, h2, h3, .display-font {
   transform: translateX(4px);
 }
 
-.preview-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-@media (min-width: 768px) {
-  .preview-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .preview-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.preview-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--paper);
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 24px;
-  padding: 20px;
-  text-decoration: none;
-  color: var(--ink);
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
-  position: relative;
-  outline: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .preview-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    border-color: rgba(197, 245, 146, 0.2); /* var(--mint) / 20% */
-  }
-}
-
-.preview-card:focus-visible {
-  outline: 2px solid var(--mint);
-  outline-offset: 2px;
-}
-
-.preview-visual-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  background: rgba(0,0,0,0.2);
-}
-
-.preview-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.preview-image.loaded {
-  opacity: 1;
-}
-
-.preview-skeleton {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(255,255,255,0.02) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.02) 75%);
-  background-size: 200% 100%;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .preview-skeleton {
-    animation: shimmer 2s infinite linear;
-  }
-}
-
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
 .preview-eyebrow {
   font-family: 'Archivo Black', sans-serif;
   font-size: 11px;
@@ -892,37 +801,6 @@ h1, h2, h3, .display-font {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 8px;
-}
-
-.preview-title {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 24px;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
-
-.preview-desc {
-  font-size: 14px;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.6;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.preview-bullets {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.preview-bullets li {
-  font-size: 12px;
-  padding: 4px 10px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 12px;
-  color: rgba(255,255,255,0.8);
 }
 
 .preview-btn {
@@ -941,10 +819,6 @@ h1, h2, h3, .display-font {
   margin-left: 4px;
   transition: transform 0.2s ease;
   display: inline-block;
-}
-
-.preview-card:hover .preview-btn::after {
-  transform: translateX(4px);
 }
 
 /* --- FAQ SECTION --- */
