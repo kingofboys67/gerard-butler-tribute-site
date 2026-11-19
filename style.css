@@ -269,13 +269,92 @@ h1, h2, h3, .display-font {
 .archive-mosaic img { width: 100%; height: 250px; object-fit: cover; border-radius: 16px; display: block; background: #22242e; }
 
 /* --- 9. CTA --- */
-.cta-section { background: linear-gradient(135deg, var(--coral-1), var(--purple-2)); display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; color: var(--ink); }
-.cta-content h2 { font-size: clamp(60px, 8vw, 100px); line-height: 1; margin-bottom: 20px; }
-.cta-content p { font-size: 24px; font-weight: 500; opacity: 0.9; margin-bottom: 40px; }
-.cta-form { background: #0f1015; border-radius: 60px; padding: 10px; display: flex; max-width: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-.cta-form input { flex: 1; border: none; background: transparent; padding: 0 30px; font-size: 18px; font-family: inherit; outline: none; font-weight: 500; color: #fff; }
-.cta-form button { background: var(--coral-1); color: #000; border: none; border-radius: 50px; padding: 20px 40px; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.3s ease; }
-.cta-portrait img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+.cta-section {
+  background: linear-gradient(145deg, #11131a 0%, #0b0c10 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(197, 245, 146, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+  color: var(--ink);
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 64px 56px;
+}
+.cta-content h2 {
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 1.02;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+.cta-content p {
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+.cta-form {
+  background: #07080c;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 60px;
+  padding: 8px;
+  display: flex;
+  max-width: 500px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+}
+.cta-form:focus-within {
+  border-color: rgba(197, 245, 146, 0.5);
+}
+.cta-form input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 0 24px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  font-weight: 500;
+  color: #ffffff;
+}
+.cta-form button {
+  background: var(--mint);
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+.cta-form button:hover {
+  background: #d7f9b1;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(197, 245, 146, 0.3);
+}
+.cta-portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cta-portrait img {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+  display: block;
+}
 
 /* --- NEW: FANCLUB --- */
 .fanclub-section { background: transparent; color: var(--ink); }
@@ -571,7 +650,7 @@ h1, h2, h3, .display-font {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1200px) {
-  .about-grid, .cta-section { padding: 60px; gap: 60px; }
+  .about-grid, .cta-section { padding: 48px 36px; gap: 40px; }
   .section { padding: 80px 40px; }
   .polaroid-grid { grid-template-columns: repeat(4, 1fr); }
   .archive-mosaic { grid-template-columns: repeat(4, 1fr); }
@@ -583,8 +662,8 @@ h1, h2, h3, .display-font {
   .bts-grid { grid-template-columns: repeat(3, 1fr); }
   .polaroid-grid { grid-template-columns: repeat(3, 1fr); }
   .archive-mosaic { grid-template-columns: repeat(3, 1fr); }
-  .cta-section { grid-template-columns: 1fr; text-align: center; padding: 60px 40px; }
-  .cta-portrait { display: none; }
+  .cta-section { grid-template-columns: 1fr; text-align: center; padding: 48px 28px; gap: 36px; }
+  .cta-portrait { display: flex; }
   .cta-form { margin: 0 auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -638,6 +717,10 @@ h1, h2, h3, .display-font {
   .bts-tall, .bts-wide { grid-column: span 1; grid-row: span 1; }
   .archive-mosaic { grid-template-columns: 1fr; }
   .marquee-content { font-size: 32px; }
+  .cta-section { padding: 36px 20px; gap: 28px; }
+  .cta-form { flex-direction: column; border-radius: 20px; padding: 10px; gap: 10px; }
+  .cta-form input { padding: 12px 16px; text-align: center; }
+  .cta-form button { width: 100%; padding: 14px 24px; }
 }
 
 /* --- 10. FEATURED FILMS SHOWCASE --- */
