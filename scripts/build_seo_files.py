@@ -39,7 +39,6 @@ NOINDEX = NON_PUBLIC | {"verify.html"}
 
 PRIORITY = {
     "index.html": ("1.0", "daily"),
-    "facts.html": ("0.95", "weekly"),
     "where-to-watch.html": ("0.95", "weekly"),
     "upcoming.html": ("0.95", "weekly"),
     "films.html": ("0.95", "weekly"),
@@ -241,7 +240,7 @@ def build_ai_knowledge(films):
         "frequentlyAskedQuestions": FAQ,
         "keyPages": {
             "home": BASE + "/",
-            "facts": BASE + "/facts",
+            "facts": BASE + "/about#facts",
             "whereToWatch": BASE + "/where-to-watch",
             "upcoming": BASE + "/upcoming",
             "biography": BASE + "/about",
@@ -290,9 +289,9 @@ def build_llms(films):
     body = (
         existing
         + "\n\n## Reference Pages (generated)\n"
-        + "- **Gerard Butler Facts** (age, height, birthplace, education, awards, G-BASE): "
+        + "- **Gerard Butler Biography, Quick Facts & Awards** (age, height, birthplace, education, awards, G-BASE): "
         + BASE
-        + "/facts\n"
+        + "/about#facts\n"
         + "- **Where to Watch** (streaming index for all 32 films + franchise watch orders): "
         + BASE
         + "/where-to-watch\n"

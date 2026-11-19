@@ -57,7 +57,8 @@
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/rss.xml", "destination": "/feed.xml", "permanent": true },
-    { "source": "/home", "destination": "/", "permanent": true }
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/facts", "destination": "/about#facts", "permanent": true }
   ],
   "rewrites": [
     {

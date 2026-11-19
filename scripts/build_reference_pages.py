@@ -28,7 +28,6 @@ NAV = [
     ("news", "News"),
     ("charity", "Charity"),
     ("fanclub", "Fanclub"),
-    ("facts", "Facts"),
     ("where-to-watch", "Watch"),
     ("upcoming", "Upcoming"),
 ]
@@ -729,7 +728,7 @@ def upcoming_body():
       <nav class="film-nav-prevnext" aria-label="Related reference pages" style="border-top:none;padding-top:8px;">
         <a class="film-step" href="films#film-index">Complete filmography &rarr;</a>
         <a class="film-step" href="where-to-watch">Where to watch &rarr;</a>
-        <a class="film-step" href="facts">Gerard Butler facts &rarr;</a>
+        <a class="film-step" href="about#facts">Gerard Butler facts &rarr;</a>
       </nav>
     </section>
 %s""" % (
@@ -792,7 +791,7 @@ def main():
     spec.loader.exec_module(mod)
     films = mod.film_list()
 
-    build_facts()
+    # build_facts()  # Facts merged into about.html (#facts)
     build_where(films)
     build_upcoming()
 

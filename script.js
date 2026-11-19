@@ -736,6 +736,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById('gb-search-modal')) return;
 
     const siteIndex = [
+      { title: "Biography & Full Life Story", cat: "About", desc: "Gerard Butler's four-chapter biography from Paisley, Scotland and Glasgow Law School to Hollywood.", url: "/about#biography" },
+      { title: "Quick Facts, Stats & Awards", cat: "Facts", desc: "Age, height, birthplace, education, G-BASE Productions, career timeline, and major awards.", url: "/about#facts" },
+      { title: "Gerard Butler FAQ", cat: "FAQ", desc: "Frequently asked questions about Gerard Butler's life, career, franchises, and charity work.", url: "/about#faq" },
       { title: "300 (2006)", cat: "Movie", desc: "King Leonidas leading 300 Spartans against Xerxes at Thermopylae.", url: "/movie-300" },
       { title: "Olympus Has Fallen (2013)", cat: "Movie", desc: "Mike Banning protects the White House against paramilitary siege.", url: "/movie-olympus-has-fallen" },
       { title: "London Has Fallen (2016)", cat: "Movie", desc: "High-stakes terror conspiracy during a state funeral in London.", url: "/movie-london-has-fallen" },
